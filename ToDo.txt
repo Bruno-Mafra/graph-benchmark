@@ -1,0 +1,4 @@
+- Adicionar peso nas arestas
+- Adicionar opção de alterar o label das arestas
+- Ajustar o menu lateral e adiiconar o botão de remover nós
+- Impedir de criar conexão redundante no grafo

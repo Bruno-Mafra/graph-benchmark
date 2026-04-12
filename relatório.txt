@@ -1,0 +1,166 @@
+Universidade Federal do ABC
+Centro de Matemática, Computação e Cognição
+Bacharelado em Ciência da Computação
+
+Relatório Parcial - PGC I
+
+Estudo dos algoritmos para o problema de caminho mais curto e suas variantes
+Aluno(a): Bruno Francisco Rodrigues Mafra
+Orientador: Majid Forghani Elahabad
+
+Resumo
+O problema do caminho mais curto é um dos temas mais conhecidos em teoria dos grafos e aparece em várias áreas da computação. A ideia é representar um sistema qualquer através de um grafo com vértices, arestas e pesos e então encontrar o trajeto de menor custo entre dois pontos. Esse é um tipo de problema que aparece em navegação, logística, jogos, roteamento de redes e vários outros contextos, portanto, entender como esses algoritmos funcionam é essencial.
+Dentre os métodos clássicos, Dijkstra é geralmente um dos primeiros nomes que vem em mente, já que é eficiente, relativamente simples de implementar e amplamente utilizado. Além dele, existem outros algoritmos tradicionais, como Bellman-Ford, Floyd-Warshall e Johnson, cada um com suas vantagens em cenários específicos. Também existem abordagens heurísticas e híbridas, como A*, métodos baseados em busca gulosa e até técnicas inspiradas em inteligência artificial, mas o foco principal deste trabalho será nos algoritmos clássicos.
+O projeto tem como objetivo estudar esses algoritmos de forma mais aprofundada, analisando tanto a parte teórica quanto o comportamento prático deles. A ideia é entender bem suas diferenças, limites, custos computacionais e situações em que faz mais sentido usar cada um deles.
+Para a parte prática, a proposta é desenvolver uma ferramenta de benchmark, ou seja, uma aplicação web onde o usuário possa montar um grafo visualmente ou importar a partir de um arquivo de texto, escolher quais algoritmos quer testar e assim visualizar dados de performance, como tempo de execução e uso de memória. Essa ferramenta poderá então ser utilizada para testar mais diretamente o comportamento dos algoritmos em vários cenários e entender melhor como cada um se comporta diante de grafos com tamanhos e características diferentes.
+Com o desenvolvimento do projeto, espero consolidar os conhecimentos adquiridos na graduação, aprofundar o entendimento sobre os algoritmos clássicos de caminho mínimo e avaliar, na prática, como cada abordagem se comporta. O benchmark deve ajudar a visualizar essas diferenças de maneira clara e apoiar conclusões sobre eficiência, limitações e possíveis caminhos de melhoria.
+
+1 - Revisão bibliográfica
+
+1.1 - O problema do caminho mais curto
+Dado um grafo ponderado definido por um conjunto de nós (vértices), um conjunto de ligações (arestas) e um conjunto de pesos que representa o custo associado a cada aresta, o problema do caminho mais curto consiste em obter a trajetória que minimize o custo de travessia entre dois vértices quaisquer desse grafo. Tal custo é definido como a soma dos pesos das arestas escolhidas para realizar o trajeto. O problema pode não ter solução caso não exista um trajeto possível entre os dois vértices escolhidos.
+
+1.2 - Algoritmos clássicos
+Os algoritmos clássicos são a base da maior parte das abordagens modernas para resolver o problema do caminho mais curto e continuam sendo referência pela simplicidade, eficiência e robustez. Entender como eles funcionam, suas limitações e em quais cenários cada um se destaca é essencial para uma análise mais profunda sobre o tema deste projeto, por essa razão, eles serão o foco.
+
+1.2.1 - Dijkstra
+O algoritmo de Dijkstra é usado para encontrar as menores distâncias de um vértice inicial para todos os outros vértices alcançáveis no grafo. Ele funciona aplicando o princípio de relaxamento e, a cada passo, escolhe o vértice ainda não visitado com a menor distância conhecida para então tentar melhorar os caminhos de seus vizinhos. Como é um método guloso, ele toma sempre a melhor decisão local naquele momento. Apesar de ser bastante eficiente, não pode ser usado quando existe alguma aresta com peso negativo. Com estruturas adequadas, sua complexidade fica em O(E log V). É um algoritmo amplamente aplicado em roteamento, sistemas de navegação, redes e até em jogos.
+Dijkstra(D, w, s)
+	para todo vértice v ∈ V(D) faça
+		v.predecessor = null
+		v.distancia = ∞
+		v.visitado = false
+	s.distancia = 0
+	enquanto houver vértice u com u.visitado = false e u.distancia ≠ faça
+		seja x um vértice não visitado com menor valor x.distancia
+		x.visitado = true
+		para todo vértice y ∈ N(x) faça
+			se y.visitado = false então
+				se x.distancia + w(xy) < y.distancia então
+					y.distancia = x.distancia + w(xy)
+					y.predecessor = x
+
+1.2.2 - Bellman-Ford
+O Bellman-Ford também calcula menores caminhos a partir de um vértice de origem, mas tem a vantagem de lidar com arestas de peso negativo. Ele basicamente repete a relaxação de todas as arestas por V−1 iterações, garantindo que qualquer caminho mínimo seja encontrado. Além disso, ele consegue detectar ciclos negativos ao verificar se ainda há mudanças após essas iterações. Apesar da maior flexibilidade, é mais lento que Dijkstra, com complexidade O(V·E). Ainda assim, acaba sendo útil em cenários onde pesos negativos fazem parte do modelo, como em certas análises de custo e redes específicas.
+
+BellmanFord(D, w, s)
+    para todo vértice v ∈ V(D) faça
+        v.predecessor = null
+        v.distancia = ∞
+    s.distancia = 0
+
+    // Relaxa todas as arestas V-1 vezes
+    para i de 1 até |V(D)| - 1 faça
+        para cada aresta (u, v) ∈ E(D) faça
+            se u.distancia + w(u,v) < v.distancia então
+                v.distancia = u.distancia + w(u,v)
+                v.predecessor = u
+
+    // Checa ciclo negativo
+    para cada aresta (u, v) ∈ E(D) faça
+        se u.distancia + w(u,v) < v.distancia então
+            retornar "Existe ciclo negativo"
+
+
+1.2.3 - Floyd-Warshall
+Já o Floyd-Warshall resolve o problema das menores distâncias entre todos os pares de vértices de uma só vez. Baseado em programação dinâmica, o algoritmo testa para cada par (i, j) se passar por um terceiro vértice k melhora o caminho. Ele suporta pesos negativos e também identifica ciclos negativos ao observar se a distância de um vértice para ele mesmo fica negativa.
+Apesar de simples de implementar, é pesado computacionalmente com complexidade O(V³), o que o torna mais indicado para grafos menores ou para situações em que se precisa de uma matriz completa de distâncias.
+
+FloydWarshall(D, w)
+    para todo par (i, j) faça
+        se i = j então
+            dist[i][j] = 0
+        senão se existe aresta (i, j) então
+            dist[i][j] = w(i, j)
+        senão
+            dist[i][j] = ∞
+
+    para cada vértice k ∈ V(D) faça
+        para cada vértice i ∈ V(D) faça
+            para cada vértice j ∈ V(D) faça
+                se dist[i][k] + dist[k][j] < dist[i][j] então
+                    dist[i][j] = dist[i][k] + dist[k][j]
+
+1.2.4 - Johnson’s
+Por fim, o algoritmo de Johnson combina ideias do Bellman-Ford e do Dijkstra para calcular todas as menores distâncias entre todos os pares de maneira eficiente em grafos grandes e esparsos, mesmo quando existem arestas negativas (desde que não haja ciclos negativos). 
+Ele começa usando Bellman-Ford para ajustar os pesos e eliminar a influência negativa deles, repondera o grafo e depois executa Dijkstra a partir de cada vértice. Isso permite obter o conjunto completo de distâncias com boa performance, alcançando complexidade O(V·E + V·E log V). 
+Essa abordagem é bastante útil quando Floyd-Warshall seria lento demais, mas ainda se precisa tratar pesos negativos com segurança.
+
+Johnson(D, w)
+    // Adiciona vértice q ligado a todos os outros com peso 0
+    adicionar vértice q
+    para cada vértice v ∈ V(D) faça
+        adicionar aresta (q, v) com peso 0
+
+    // Passo 1: Bellman-Ford para obter potenciais h(v)
+    rodar BellmanFord(D, w, q)
+    para cada vértice v ∈ V(D) faça
+        h[v] = v.distancia
+
+    // Passo 2: Repondera as arestas
+    para cada aresta (u, v) ∈ E(D) faça
+        w'(u, v) = w(u, v) + h[u] - h[v]
+
+    // Remove q e suas arestas
+    remover vértice q
+
+    // Passo 3: roda Dijkstra para cada vértice
+    para cada vértice s ∈ V(D) faça
+        rodar Dijkstra(D, w', s)
+        para cada vértice v ∈ V(D) faça
+            dist[s][v] = v.distancia + h[v] - h[s]
+
+    retornar dist
+
+1.2.5 - Tabela comparativa
+Como dito anteriormente, esse projeto terá foco nos algoritmos clássicos. A seguir, uma tabela que sintetiza as características principais de cada um deles.
+
+Algoritmo	Vantagens	Desvantagens	Tempo de execução
+Dijkstra	
+Funciona para grafos com pesos não negativos.
+	Não funciona com arestas de peso negativo.	O(E log V) 
+
+* Usando
+ Heap
+	Funciona bem em grafos densos.	Pode ser ineficiente em grafos muito grandes ou esparsos sem boas estruturas auxiliares.	
+	Garante solução ótima para caminho mínimo de uma única fonte.		
+Bellman-Ford	Lida com arestas de peso negativo.
+Muito mais lento que Dijkstra.	O(V · E)
+	Detecta ciclos de peso negativo.	Escalabilidade limitada em grafos grandes.	
+	Útil em sistemas distribuídos.		
+Floyd-Warshall	Calcula todos os caminhos mínimos em uma única execução.	Extremamente lento para grafos grandes.	O(V³)
+	Implementação simples.		
+	Detecta ciclos negativos.	Alto consumo de memória.	
+Johnson	Muito eficiente para grafos grandes e esparsos.	Implementação mais complexa devido à reponderação.	O(V·E + V·E log V)
+	Suporta pesos negativos 
+(ciclos não).	Bellman-Ford inicial acaba deixando mais custoso.	
+	Aproveita a eficiência do Dijkstra após reponderação.		
+
+1.3 - Algoritmos não clássicos (Híbridos e Heurísticos)
+Além dos algoritmos clássicos, existem abordagens menos tradicionais que também são usadas para resolver o problema do caminho mais curto. Essas costumam aparecer em problemas com restrições mais complexas ou quando se busca desempenho melhor em cenários práticos bem específicos. 
+Entre os heurísticos, temos métodos como o A*, que combina custo acumulado com uma função de estimativa para guiar a busca, o Greedy Best-First Search, que foca apenas na heurística e tende a ser mais rápido, embora menos preciso, e técnicas inspiradas na natureza como Ant Colony Optimization, que simulam o comportamento de colônias de formigas para explorar múltiplas rotas em paralelo.
+Já para os métodos híbridos, surgiram algoritmos que misturam heurísticas com aprendizado de máquina ou otimização evolutiva, exemplo: ML-Based Path Finding, Dynamic A* e variantes baseadas em algoritmos genéticos que conseguem se adaptar melhor a ambientes dinâmicos ou grandes demais para o uso de técnicas determinísticas. 
+Embora essas estratégias não sejam o foco deste trabalho, elas representam alternativas importantes em áreas como robótica, jogos, navegação e sistemas responsivos, e ajudam a contextualizar por que os algoritmos clássicos continuam relevantes como base de comparação. Se houver tempo hábil, algumas dessas técnicas poderão ser adicionadas a ferramenta de benchmark e incluídas na análise de desempenho final.
+
+
+2 - Parte prática (prototipação + análises de performance)
+A parte prática do projeto ainda está em fase inicial, a ideia é uma ferramenta de benchmark para fazer as análises de performance dos algoritmos estudados. O usuário terá uma interface para construir um grafo adicionando nós e ligações entre eles (vértices e arestas). Além disso, terá também a opção de importar um grafo a partir de um arquivo de texto (o formato exato ainda será definido nas próximas etapas do projeto). Depois de montar o grafo, o usuário poderá selecionar os algoritmos que deseja avaliar e, ao final da execução, a ferramenta exibirá uma análise de desempenho por meio de gráficos e tabelas.
+Atualmente já existe uma base bem inicial, porém funcional, da interface, onde é possível construir o grafo manipulando vértices e arestas de forma intuitiva. O usuário pode adicionar novos vértices com um clique, mover cada elemento livremente e remover itens selecionados pelo teclado. A lógica de conexão entre dois vértices também está implementada, incluindo a criação automática de arestas com setas e o ajuste visual do traçado.
+
+ 
+Imagem 1 - Interface para construção do grafo (protótipo inicial)
+
+As principais tecnologias utilizadas até o momento são TypeScript, React e React Flow. Detalhes da implementação, trechos do código e explicações mais detalhadas sobre as ferramentas utilizadas serão apresentadas no relatório final do projeto.
+Nos próximos passos, a ideia é expandir a interface para permitir a importação de grafos por arquivo de texto, adicionar opções de exportação, permitir a seleção dos algoritmos a serem testados e desenvolver a parte responsável pela medição de métricas de desempenho como tempo de execução e uso de memória. Cada algoritmo será implementado manualmente (evitando recorrer ao uso de bibliotecas prontas), tanto para reforçar o aprendizado quanto para possibilitar, mais pra frente, uma discussão sobre as escolhas feitas na implementação e seus possíveis impactos na performance.
+
+3 - Conclusão
+Paralelamente ao desenvolvimento da ferramenta de benchmark, a expectativa é continuar aprofundando os estudos sobre os algoritmos de caminho mais curto e entender melhor não só o funcionamento teórico de cada método, mas também como escolhas específicas na implementação podem afetar a performance. 
+Existe também a possibilidade de incluir a análise de um algoritmo recente apresentado em um artigo, que promete desempenho superior ao de Dijkstra em alguns cenários específicos. Caso haja tempo, essa comparação adicional poderá enriquecer o estudo como um todo.
+A inclusão das técnicas não clássicas no benchmark é ainda também incerta, já que isso depende do tempo disponível e da maturidade dos estudos sobre essas técnicas nas fases seguintes. Caso não seja viável, permanecerão como possibilidade futura.
+Na prototipação espero conseguir avançar de forma consistente ao longo dos próximos meses e, uma vez que tudo estiver finalizado, estável e integrado, a parte da análise de desempenho (performances dos algoritmos) poderá ser realizada com mais calma. No geral, o projeto segue bem direcionado e com boas perspectivas para a próxima fase.
+
+4 - Referências
+Harem Mahdi Hadi, and Ibrahim Mahmood Ibrahim. 2025. “A Comprehensive Review of Shortest Path Algorithms for Network Routing”. Asian Journal of Research in Computer Science 18 (3):152–175. https://doi.org/10.9734/ajrcos/2025/v18i3584.
+LINTZMAYER, Carla Negri; MOTA, Guilherme Oliveira. Análise de Algoritmos e de Estruturas de Dados. Versão de 8 fev. 2025. Manuscrito, UFABC e USP, 2025.
+DUAN, Ran; MAO, Jiayi; MAO, Xiao; SHU, Xinkai; YIN, Longhui. Breaking the Sorting Barrier for Directed Single-Source Shortest Paths. 2025. Disponível em: arXiv:2504.17033.
+
