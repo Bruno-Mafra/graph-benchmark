@@ -1,6 +1,7 @@
 import { MarkerType } from "reactflow";
 import type { Node, Edge } from "reactflow";
 import type { Graph } from "../algorithms/types";
+import { assignDistributedHandles } from "./edgeHandles";
 import {
   GRID_LAYOUT_CELL,
   layoutNodesCircle,
@@ -41,7 +42,7 @@ export function graphToReactFlowEdges(g: Graph): Edge[] {
       });
     }
   }
-  return edges;
+  return assignDistributedHandles(edges);
 }
 
 /**
@@ -65,7 +66,7 @@ export function graphToReactFlowEdgesUndirectedVisual(g: Graph): Edge[] {
       });
     }
   }
-  return edges;
+  return assignDistributedHandles(edges);
 }
 
 export function makeNodesFromCount(n: number): Node[] {

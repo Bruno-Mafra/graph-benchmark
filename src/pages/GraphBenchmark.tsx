@@ -15,10 +15,13 @@ import { graphHasNegativeEdge } from "../graph/graphAnalysis";
 import { runBenchmark } from "../benchmark/runBenchmark";
 import type { BenchmarkRunResult } from "../benchmark/runBenchmark";
 import BenchmarkTimeChart from "../benchmark/BenchmarkTimeChart";
-import BenchmarkMemoryChart from "../benchmark/BenchmarkMemoryChart";
+import BenchmarkGrowthChart from "../benchmark/BenchmarkGrowthChart";
+import { runSparseGrowthCurve } from "../benchmark/growthBenchmark";
+import type { GrowthCurveResult } from "../benchmark/growthBenchmark";
 import { chartColorForAlgorithm } from "../benchmark/chartColors";
 import SimpleModal from "../components/SimpleModal/SimpleModal";
 import PresetGraphModal from "../components/PresetGraphModal/PresetGraphModal";
+import { AddFileIcon } from "../assets/icons/icons";
 import {
   MainContent,
   PageHeader,
@@ -33,13 +36,16 @@ import {
   RadioLabel,
   UploadPanel,
   DropZone,
+  DropZoneIcon,
   DropZoneFileButton,
   DropHint,
+  DropHintDescription,
   FormatInstructions,
   JsonExample,
   EditorToolbar,
   PresetModelButton,
-  BenchmarkContainer,
+  SectionContainer,
+  EmptySectionContainer,
   BenchmarkParagraph,
   AlgorithmCheckboxList,
   CheckboxRow,
@@ -59,14 +65,26 @@ import {
   SourceLabel,
   SourceSelect,
   WarningBanner,
-  MetricsBlock,
-  MetricsTitle,
   SkippedReason,
+  DistancesTableContainer,
   DistancesTable,
   DistancesTableRow,
   DistancesShowMoreButton,
   ChartSection,
+  TitleContainer,
   SubSectionTitle,
+  MetricsAlgoGrid,
+  MetricsAlgoCard,
+  MetricsAlgoTitle,
+  MetricsAlgoHint,
+  MetricsStatGrid,
+  MetricsStat,
+  MetricsStatLabel,
+  MetricsStatValueRow,
+  MetricsStatNumber,
+  MetricsStatUnit,
+  GrowthCurveButton,
+  ResultsTitle,
 } from "./styles";
 
 const initialNodes: Node[] = [
@@ -119,6 +137,8 @@ function GraphBenchmark() {
   const [useBellmanFord, setUseBellmanFord] = useState(true);
   const [benchmarkRunning, setBenchmarkRunning] = useState(false);
   const [lastRun, setLastRun] = useState<BenchmarkRunResult | null>(null);
+  const [growthRun, setGrowthRun] = useState<GrowthCurveResult | null>(null);
+  const [growthRunning, setGrowthRunning] = useState(false);
   /** Linhas visíveis na tabela de distâncias (paginação +10). */
   const [distTableVisibleRows, setDistTableVisibleRows] = useState(10);
 
@@ -299,20 +319,18 @@ function GraphBenchmark() {
     setLastRun(null);
 
     queueMicrotask(() => {
-      void (async () => {
-        try {
-          const run = await runBenchmark(converted.graph, sourceNodeIndex, {
-            dijkstra: useDijkstra,
-            bellmanFord: useBellmanFord,
-          });
-          setLastRun(run);
-        } catch (e) {
-          console.error(e);
-          toast.error("Erro ao executar o benchmark.");
-        } finally {
-          setBenchmarkRunning(false);
-        }
-      })();
+      try {
+        const run = runBenchmark(converted.graph, sourceNodeIndex, {
+          dijkstra: useDijkstra,
+          bellmanFord: useBellmanFord,
+        });
+        setLastRun(run);
+      } catch (e) {
+        console.error(e);
+        toast.error("Erro ao executar o benchmark.");
+      } finally {
+        setBenchmarkRunning(false);
+      }
     });
   }, [
     nodes,
@@ -322,6 +340,30 @@ function GraphBenchmark() {
     useDijkstra,
     useBellmanFord,
   ]);
+
+  const handleGrowthCurve = useCallback(() => {
+    if (!anyAlgorithmSelected) {
+      toast.warning("Selecione pelo menos um algoritmo.");
+      return;
+    }
+    setGrowthRunning(true);
+    setGrowthRun(null);
+    void (async () => {
+      try {
+        const res = await runSparseGrowthCurve({
+          dijkstra: useDijkstra,
+          bellmanFord: useBellmanFord,
+        });
+        setGrowthRun(res);
+        toast.success("Curva de crescimento concluída.");
+      } catch (e) {
+        console.error(e);
+        toast.error("Erro ao calcular a curva de crescimento.");
+      } finally {
+        setGrowthRunning(false);
+      }
+    })();
+  }, [anyAlgorithmSelected, useDijkstra, useBellmanFord]);
 
   const handleGraphTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setGraphType(e.target.value as "upload" | "custom");
@@ -376,17 +418,9 @@ function GraphBenchmark() {
 
           {graphType === "upload" && (
             <>
-              <EditorToolbar>
-                <PresetModelButton
-                  type="button"
-                  onClick={() => setPresetModalOpen(true)}
-                >
-                  Escolher modelo pronto
-                </PresetModelButton>
-              </EditorToolbar>
               <BenchmarkParagraph>
                 Use os botões à esquerda do canvas para adicionar ou remover nós e
-                arestas. Duplo clique no nó ou na aresta para editar nome ou peso.
+                arestas. Dê duplo clique no nó ou na aresta para editar nome ou peso.
               </BenchmarkParagraph>
               <Graph
                 nodes={nodes}
@@ -410,11 +444,44 @@ function GraphBenchmark() {
                   toast.success("Grafo gerado a partir do modelo.");
                 }}
               />
+              <EditorToolbar>
+                <PresetModelButton
+                  type="button"
+                  onClick={() => setPresetModalOpen(true)}
+                >
+                  Escolher modelo pronto
+                </PresetModelButton>
+              </EditorToolbar>
             </>
           )}
 
           {graphType === "custom" && (
             <UploadPanel>
+              <SubSectionTitle $margin="0 0 -8px">Importar grafo</SubSectionTitle>
+              <DropZone
+                $active={dropActive}
+                onDragEnter={onDropZoneDragEnter}
+                onDragLeave={onDropZoneDragLeave}
+                onDragOver={onDropZoneDragOver}
+                onDrop={onDropZoneDrop}
+              >
+                <DropZoneIcon>
+                  <AddFileIcon />
+                </DropZoneIcon>
+                <DropZoneFileButton
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                >
+                  + Selecionar arquivo
+                </DropZoneFileButton>
+                <DropHint>
+                  ou arraste e solte o arquivo aqui
+                </DropHint>
+                <DropHintDescription>
+                  Formatos válidos: .json
+                </DropHintDescription>
+              </DropZone>
+              <SubSectionTitle $margin="0 0 -8px">Instruções de upload</SubSectionTitle>
               <FormatInstructions>
                 <p style={{ margin: 0 }}>
                   Envie um arquivo <code>JSON</code> codificado em UTF-8 (extensão
@@ -450,6 +517,7 @@ function GraphBenchmark() {
                   exatamente este formato e pode ser reimportado aqui.
                 </p>
               </FormatInstructions>
+              <SubSectionTitle $margin="0 0 -8px">Exemplo de arquivo JSON</SubSectionTitle>
               <JsonExample>{GRAPH_FORMAT_EXAMPLE}</JsonExample>
               <input
                 ref={fileInputRef}
@@ -458,25 +526,6 @@ function GraphBenchmark() {
                 style={{ display: "none" }}
                 onChange={onFileInputChange}
               />
-              <DropZone
-                $active={dropActive}
-                onDragEnter={onDropZoneDragEnter}
-                onDragLeave={onDropZoneDragLeave}
-                onDragOver={onDropZoneDragOver}
-                onDrop={onDropZoneDrop}
-              >
-                <DropZoneFileButton
-                  type="button"
-                  onClick={() => fileInputRef.current?.click()}
-                >
-                  Selecionar arquivo
-                </DropZoneFileButton>
-                <DropHint>
-                  ou arraste e solte o arquivo aqui.
-                  <br />
-                  Formatos válidos: .json
-                </DropHint>
-              </DropZone>
             </UploadPanel>
           )}
 
@@ -503,12 +552,11 @@ function GraphBenchmark() {
             </p>
           </SimpleModal>
         </CreateGraphContainer>
-        <BenchmarkContainer>
+        <SectionContainer>
           <h2>Benchmark</h2>
           <BenchmarkParagraph>
             O tempo médio por execução é estimado repetindo o algoritmo até o
-            bloco levar pelo menos ~2 ms (assim grafos pequenos deixam de aparecer
-            como 0 ms). Valores também são mostrados em microssegundos (µs).
+            bloco levar pelo menos ~2 ms (para garantir que funcione também para grafos pequenos). Valores também são mostrados em microssegundos (µs).
           </BenchmarkParagraph>
 
           <SourceRow>
@@ -564,19 +612,23 @@ function GraphBenchmark() {
 
           {lastRun && lastRun.results.length > 0 && (
             <>
-              <SubSectionTitle>Comparação de tempo (média por execução)</SubSectionTitle>
-              <p
-                style={{
-                  margin: "0 0 10px",
-                  fontSize: 12,
-                  color: "#9a9a9a",
-                  lineHeight: 1.45,
-                }}
-              >
-                Ordenado do <strong style={{ color: "#ddd" }}>melhor</strong> (menor
-                tempo médio) para o pior. A barra colorida é proporcional ao tempo em
-                relação ao algoritmo mais lento desta rodada (100% = mais lento).
-              </p>
+            <Divider />
+            <ResultsTitle $margin="0 0 -16px">Resultados</ResultsTitle>
+              <TitleContainer>
+                <SubSectionTitle>Comparação de tempo (média por execução)</SubSectionTitle>
+                <p
+                  style={{
+                    margin: "0px",
+                    fontSize: 12,
+                    color: "#9a9a9a",
+                    lineHeight: 1.45,
+                  }}
+                >
+                  Ordenado do <strong style={{ color: "#ddd" }}>melhor</strong> (menor
+                  tempo médio) para o pior. A barra colorida é proporcional ao tempo em
+                  relação ao algoritmo mais lento desta rodada (100% = mais lento).
+                </p>
+              </TitleContainer>
               {timeRanking && (
                 <ResultsRankList>
                   {timeRanking.ordered.map((r, idx) => {
@@ -620,12 +672,6 @@ function GraphBenchmark() {
                 <BenchmarkTimeChart results={lastRun.results} />
               </ChartSection>
 
-              {lastRun.results.some((r) => !r.skipped) && (
-                <ChartSection>
-                  <BenchmarkMemoryChart results={lastRun.results} />
-                </ChartSection>
-              )}
-
               {lastRun.results.some((r) => r.skipped) && (
                 <>
                   <SubSectionTitle>Algoritmo não executado</SubSectionTitle>
@@ -639,225 +685,237 @@ function GraphBenchmark() {
                 </>
               )}
 
+              <TitleContainer>
               <SubSectionTitle>Métricas adicionais</SubSectionTitle>
-              {lastRun.heapBeforeRunBytes != null && (
                 <p
                   style={{
-                    margin: "0 0 12px",
-                    fontSize: 13,
-                    color: "#b8b8b8",
-                    lineHeight: 1.5,
+                    margin: "0px",
+                    fontSize: 12,
+                    color: "#9a9a9a",
+                    lineHeight: 1.45,
                   }}
                 >
-                  Memória antes de medir os algoritmos:{" "}
-                  <strong style={{ color: "#eee" }}>
-                    {(lastRun.heapBeforeRunBytes / (1024 * 1024)).toFixed(2)} MB
-                  </strong>
-                  {lastRun.memoryMeasurementMode === "measureUA" ? (
-                    <>
-                      {" "}
-                      (<code style={{ fontSize: 12 }}>
-                        measureUserAgentSpecificMemory
-                      </code>
-                      — estimativa do user agent; requer Chrome recente e contexto
-                      seguro, ex. <code style={{ fontSize: 12 }}>https</code> ou{" "}
-                      <code style={{ fontSize: 12 }}>localhost</code>).
-                    </>
-                  ) : (
-                    <>
-                      {" "}
-                      heap JS reportado (
-                      <code style={{ fontSize: 12 }}>performance.memory</code>
-                      , principalmente Chrome).
-                    </>
-                  )}
+                  Valores da última execução neste grafo.{" "}
+                  <strong style={{ color: "#b8b8c0", fontWeight: 600 }}>
+                    Dijkstra
+                  </strong>{" "}
+                  mede trabalho na{" "}
+                  <span title="Fila onde o próximo nó processado é sempre o de menor distância provisória até agora">
+                    fila de prioridade (heap)
+                  </span>
+                  ;{" "}
+                  <strong style={{ color: "#b8b8c0", fontWeight: 600 }}>
+                    Bellman-Ford
+                  </strong>{" "}
+                  mede passagens pelas arestas e se ainda dava para encurtar algum
+                  caminho. Números grandes usam separador de milhares.
                 </p>
-              )}
-              {lastRun.heapBeforeRunBytes == null &&
-                lastRun.results.some((r) => !r.skipped) && (
-                  <p
-                    style={{
-                      margin: "0 0 12px",
-                      fontSize: 12,
-                      color: "#a08060",
-                      lineHeight: 1.45,
-                    }}
-                  >
-                    Memória não pôde ser medida (API indisponível ou bloqueada). Use
-                    Chrome em HTTPS ou localhost; em benchmarks controlados pode-se
-                    iniciar o Chrome com{" "}
-                    <code style={{ fontSize: 11 }}>
-                      --js-flags=&quot;--expose-gc&quot;
-                    </code>{" "}
-                    para expor <code style={{ fontSize: 11 }}>gc()</code> e estabilizar
-                    leituras.
-                  </p>
-                )}
-              {lastRun.results.map((r) => {
-                if (r.skipped) return null;
-                return (
-                  <MetricsBlock key={`m-${r.algorithmId}`}>
-                    <MetricsTitle>{r.label}</MetricsTitle>
-                    {r.heapUsedAfterBytes != null && (
-                      <>
-                        <div>
-                          {r.memoryMeasurementMode === "measureUA"
-                            ? "Memória (UA) após execução instrumentada"
-                            : "Heap JS após execução instrumentada"}
-                          :{" "}
-                          <strong>
-                            {(r.heapUsedAfterBytes / (1024 * 1024)).toFixed(2)} MB
-                          </strong>
-                          {r.memoryMeasurementMode !== "measureUA" && " usados"}
-                          {r.jsHeapSizeLimit != null && r.jsHeapSizeLimit > 0 && (
-                            <>
-                              {" "}
-                              (
-                              {(
-                                (r.heapUsedAfterBytes / r.jsHeapSizeLimit) *
-                                100
-                              ).toFixed(1)}
-                              % do limite do contexto JS)
-                            </>
-                          )}
-                        </div>
-                        {r.totalJSHeapSize != null && (
-                          <div style={{ opacity: 0.95 }}>
-                            Total alocado no heap:{" "}
-                            {(r.totalJSHeapSize / (1024 * 1024)).toFixed(2)} MB
-                          </div>
-                        )}
-                        {r.heapDeltaBytes != null && (
-                          <div>
-                            Δ memória desde a medição anterior:{" "}
-                            <strong
-                              style={{
-                                color:
-                                  r.heapDeltaBytes > 0
-                                    ? "#f0a878"
-                                    : r.heapDeltaBytes < 0
-                                      ? "#7dd3a8"
-                                      : "#ddd",
-                              }}
+              </TitleContainer>
+              <MetricsAlgoGrid>
+                {lastRun.results.map((r) => {
+                  if (r.skipped) return null;
+                  const accent = chartColorForAlgorithm(r.algorithmId, 0);
+                  return (
+                    <MetricsAlgoCard key={`m-${r.algorithmId}`} $accent={accent}>
+                      <MetricsAlgoTitle>{r.label}</MetricsAlgoTitle>
+                      {r.dijkstraMetrics && (
+                        <>
+                          <MetricsAlgoHint>
+                            A fila guarda nós por distância provisória: quem está
+                            no topo é o próximo a ser fixado. As contagens mostram
+                            quanto ela foi usada.
+                          </MetricsAlgoHint>
+                          <MetricsStatGrid>
+                            <MetricsStat
+                              title="Cada vez que uma aresta melhora a estimativa de distância até um vizinho (relaxação)."
                             >
-                              {r.heapDeltaBytes >= 0 ? "+" : ""}
-                              {(r.heapDeltaBytes / 1024).toFixed(1)} KB
-                            </strong>
-                            <span style={{ opacity: 0.85 }}>
-                              {" "}
-                              (estimativa; GC pode alterar o valor)
-                            </span>
-                          </div>
-                        )}
-                      </>
-                    )}
-                    {r.heapUsedAfterBytes == null && (
-                      <div style={{ opacity: 0.8 }}>
-                        Memória: use Chrome (HTTPS ou localhost) para{" "}
-                        <code style={{ fontSize: 12 }}>measureUserAgentSpecificMemory</code>{" "}
-                        ou <code style={{ fontSize: 12 }}>performance.memory</code>.
-                      </div>
-                    )}
-                    {r.dijkstraMetrics && (
-                      <>
-                        <div>
-                          Relaxamentos (melhoria de distância):{" "}
-                          {r.dijkstraMetrics.relaxations.toLocaleString()}
-                        </div>
-                        <div>
-                          Inserções na heap:{" "}
-                          {r.dijkstraMetrics.heapPushes.toLocaleString()}
-                        </div>
-                        <div>
-                          Tamanho máximo da heap: {r.dijkstraMetrics.maxHeapSize}
-                        </div>
-                        <div>
-                          Tamanho médio da heap (amostrado):{" "}
-                          {r.dijkstraMetrics.avgHeapSize.toFixed(2)}
-                        </div>
-                        <div>
-                          Extrações da heap (iterações do laço principal):{" "}
-                          {r.dijkstraMetrics.heapExtractions.toLocaleString()}
-                        </div>
-                      </>
-                    )}
-                    {r.bellmanMetrics && (
-                      <>
-                        <div>
-                          Relaxamentos bem-sucedidos (1ª fase):{" "}
-                          {r.bellmanMetrics.successfulRelaxations.toLocaleString()}
-                        </div>
-                        <div>
-                          Iterações externas (passadas sobre V−1):{" "}
-                          {r.bellmanMetrics.outerIterations}
-                        </div>
-                        <div>
-                          Parada antecipada (sem atualização):{" "}
-                          {r.bellmanMetrics.earlyStopped ? "sim" : "não"}
-                        </div>
-                        {r.hasNegativeCycle != null && (
-                          <div>
-                            Ciclo negativo detectado:{" "}
-                            {r.hasNegativeCycle ? "sim" : "não"}
-                          </div>
-                        )}
-                      </>
-                    )}
-                  </MetricsBlock>
-                );
-              })}
+                              <MetricsStatLabel>Encurtamentos de caminho</MetricsStatLabel>
+                              <MetricsStatValueRow>
+                                <MetricsStatNumber>
+                                  {r.dijkstraMetrics.relaxations.toLocaleString("pt-BR")}
+                                </MetricsStatNumber>
+                                <MetricsStatUnit>relaxações</MetricsStatUnit>
+                              </MetricsStatValueRow>
+                            </MetricsStat>
+                            <MetricsStat
+                              title="Quantas vezes um par (distância, nó) entrou na fila de prioridade."
+                            >
+                              <MetricsStatLabel>Entradas na fila</MetricsStatLabel>
+                              <MetricsStatValueRow>
+                                <MetricsStatNumber>
+                                  {r.dijkstraMetrics.heapPushes.toLocaleString("pt-BR")}
+                                </MetricsStatNumber>
+                                <MetricsStatUnit>inserções na heap</MetricsStatUnit>
+                              </MetricsStatValueRow>
+                            </MetricsStat>
+                            <MetricsStat
+                              title="Quantos nós foram removidos da fila para serem processados (cada um era o de menor distância no momento)."
+                            >
+                              <MetricsStatLabel>Saídas da fila</MetricsStatLabel>
+                              <MetricsStatValueRow>
+                                <MetricsStatNumber>
+                                  {r.dijkstraMetrics.heapExtractions.toLocaleString(
+                                    "pt-BR"
+                                  )}
+                                </MetricsStatNumber>
+                                <MetricsStatUnit>extrações (nós processados)</MetricsStatUnit>
+                              </MetricsStatValueRow>
+                            </MetricsStat>
+                            <MetricsStat
+                              title="Maior número de itens na heap ao mesmo tempo durante a execução."
+                            >
+                              <MetricsStatLabel>Pico da fila</MetricsStatLabel>
+                              <MetricsStatValueRow>
+                                <MetricsStatNumber>
+                                  {r.dijkstraMetrics.maxHeapSize.toLocaleString("pt-BR")}
+                                </MetricsStatNumber>
+                                <MetricsStatUnit>nós de uma vez</MetricsStatUnit>
+                              </MetricsStatValueRow>
+                            </MetricsStat>
+                            <MetricsStat
+                              style={{ gridColumn: "1 / -1" }}
+                              title="Média do tamanho da heap registrada após cada inserção (amostragem interna)."
+                            >
+                              <MetricsStatLabel>Tamanho médio da fila</MetricsStatLabel>
+                              <MetricsStatValueRow>
+                                <MetricsStatNumber>
+                                  {r.dijkstraMetrics.avgHeapSize.toLocaleString("pt-BR", {
+                                    maximumFractionDigits: 2,
+                                    minimumFractionDigits: 2,
+                                  })}
+                                </MetricsStatNumber>
+                                <MetricsStatUnit>nós (média amostrada)</MetricsStatUnit>
+                              </MetricsStatValueRow>
+                            </MetricsStat>
+                          </MetricsStatGrid>
+                        </>
+                      )}
+                      {r.bellmanMetrics && (
+                        <>
+                          <MetricsAlgoHint>
+                            O algoritmo relaxa todas as arestas várias vezes, pode
+                            parar cedo se nada mudar, ou ir até{" "}
+                            <abbr title="Número de vértices">V</abbr>−1 passagens
+                            completas.
+                          </MetricsAlgoHint>
+                          <MetricsStatGrid>
+                            <MetricsStat
+                              title="Relaxações na fase principal que realmente diminuíram alguma distância."
+                            >
+                              <MetricsStatLabel>Melhorias de distância</MetricsStatLabel>
+                              <MetricsStatValueRow>
+                                <MetricsStatNumber>
+                                  {r.bellmanMetrics.successfulRelaxations.toLocaleString(
+                                    "pt-BR"
+                                  )}
+                                </MetricsStatNumber>
+                                <MetricsStatUnit>relaxações úteis (1.ª fase)</MetricsStatUnit>
+                              </MetricsStatValueRow>
+                            </MetricsStat>
+                            <MetricsStat
+                              title="Uma passagem = percorrer todas as arestas relaxando uma vez. No máximo V−1 dessas antes da checagem de ciclo."
+                            >
+                              <MetricsStatLabel>Passagens pelo grafo</MetricsStatLabel>
+                              <MetricsStatValueRow>
+                                <MetricsStatNumber>
+                                  {r.bellmanMetrics.outerIterations.toLocaleString(
+                                    "pt-BR"
+                                  )}
+                                </MetricsStatNumber>
+                                <MetricsStatUnit>rodadas (no máx. V−1)</MetricsStatUnit>
+                              </MetricsStatValueRow>
+                            </MetricsStat>
+                            <MetricsStat
+                              title="Se numa passagem inteira nenhuma distância mudou, dá para parar antes de chegar em V−1."
+                            >
+                              <MetricsStatLabel>Parou antes do limite?</MetricsStatLabel>
+                              <MetricsStatValueRow>
+                                <MetricsStatNumber>
+                                  {r.bellmanMetrics.earlyStopped ? "Sim" : "Não"}
+                                </MetricsStatNumber>
+                                <MetricsStatUnit>
+                                  {r.bellmanMetrics.earlyStopped
+                                    ? "nada mudou numa rodada inteira"
+                                    : "usou todas as rodadas permitidas"}
+                                </MetricsStatUnit>
+                              </MetricsStatValueRow>
+                            </MetricsStat>
+                            {r.hasNegativeCycle != null && (
+                              <MetricsStat
+                                title="Depois das passagens principais, uma volta extra detecta se ainda dá para melhorar distâncias (sinal de ciclo negativo)."
+                              >
+                                <MetricsStatLabel>Ciclo negativo detectado?</MetricsStatLabel>
+                                <MetricsStatValueRow>
+                                  <MetricsStatNumber>
+                                    {r.hasNegativeCycle ? "Sim" : "Não"}
+                                  </MetricsStatNumber>
+                                  <MetricsStatUnit>verificação após V−1 passagens</MetricsStatUnit>
+                                </MetricsStatValueRow>
+                              </MetricsStat>
+                            )}
+                          </MetricsStatGrid>
+                        </>
+                      )}
+                    </MetricsAlgoCard>
+                  );
+                })}
+              </MetricsAlgoGrid>
 
               {referenceDistances && (
                 <>
-                  <SubSectionTitle>Distâncias</SubSectionTitle>
-                  <p
-                    style={{
-                      fontSize: 12,
-                      color: "#9a9a9a",
-                      margin: "0 0 10px",
-                      lineHeight: 1.45,
-                    }}
-                  >
-                    Distância mínima até cada vértice a partir do nó de origem escolhido
-                    acima.
-                  </p>
-                  <DistancesTable>
-                    <thead>
-                      <tr>
-                        <th>Nó</th>
-                        <th>Distância</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {nodes
-                        .slice(0, distTableVisibleRows)
-                        .map((n, i) => {
-                          const isSource = i === sourceNodeIndex;
-                          return (
-                            <DistancesTableRow key={n.id} $isSource={isSource}>
-                              <td>
-                                {nodeDisplayLabel(n, i)}
-                                {isSource && (
-                                  <span
-                                    style={{
-                                      marginLeft: 8,
-                                      fontSize: 11,
-                                      fontWeight: 600,
-                                      color: "#4ade80",
-                                      textTransform: "uppercase",
-                                      letterSpacing: "0.04em",
-                                    }}
-                                  >
-                                    origem
-                                  </span>
-                                )}
-                              </td>
-                              <td>{formatDist(referenceDistances[i]!)}</td>
-                            </DistancesTableRow>
-                          );
-                        })}
-                    </tbody>
-                  </DistancesTable>
+                  <TitleContainer>
+                    <SubSectionTitle>Distâncias</SubSectionTitle>
+                    <p
+                      style={{
+                        margin: "0px",
+                        fontSize: 12,
+                        color: "#9a9a9a",
+                        lineHeight: 1.45,
+                      }}
+                    >
+                      Distância mínima até cada vértice a partir do nó de origem escolhido
+                      acima.
+                    </p>
+                  </TitleContainer>
+                  <DistancesTableContainer>
+                    <DistancesTable>
+                      <thead>
+                        <tr>
+                          <th>Nó</th>
+                          <th>Distância</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {nodes
+                          .slice(0, distTableVisibleRows)
+                          .map((n, i) => {
+                            const isSource = i === sourceNodeIndex;
+                            return (
+                              <DistancesTableRow key={n.id} $isSource={isSource}>
+                                <td>
+                                  {nodeDisplayLabel(n, i)}
+                                  {isSource && (
+                                    <span
+                                      style={{
+                                        marginLeft: 8,
+                                        fontSize: 11,
+                                        fontWeight: 600,
+                                        color: "#4ade80",
+                                        textTransform: "uppercase",
+                                        letterSpacing: "0.04em",
+                                      }}
+                                    >
+                                      origem
+                                    </span>
+                                  )}
+                                </td>
+                                <td>{formatDist(referenceDistances[i]!)}</td>
+                              </DistancesTableRow>
+                            );
+                          })}
+                      </tbody>
+                    </DistancesTable>
+                  </DistancesTableContainer>
                   {nodes.length > distTableVisibleRows && (
                     <DistancesShowMoreButton
                       type="button"
@@ -875,7 +933,30 @@ function GraphBenchmark() {
               )}
             </>
           )}
-        </BenchmarkContainer>
+        </SectionContainer>
+
+        <SectionContainer>
+          <h2>Curva de crescimento</h2>
+          <BenchmarkParagraph>
+            Gera grafos <strong>esparso</strong> aleatórios com |V| ∈ 100, 500, 1k, 5k e
+            10k vértices (origem no vértice 0) e mede o tempo médio de cada algoritmo
+            selecionado.
+          </BenchmarkParagraph>
+          <GrowthCurveButton
+            type="button"
+            onClick={handleGrowthCurve}
+            disabled={growthRunning || !anyAlgorithmSelected}
+          >
+            {growthRunning ? "Calculando curva…" : "Rodar curva de crescimento"}
+          </GrowthCurveButton>
+          {growthRun && (
+            <ChartSection>
+              <BenchmarkGrowthChart data={growthRun} />
+            </ChartSection>
+          )}
+        </SectionContainer>
+
+        <EmptySectionContainer></EmptySectionContainer>
       </PageContent>
     </MainContent>
   );

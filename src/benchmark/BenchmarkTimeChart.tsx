@@ -37,26 +37,6 @@ export default function BenchmarkTimeChart({
 
   return (
     <div style={{ width: "100%" }}>
-      <h4
-        style={{
-          margin: "0 0 4px",
-          fontSize: 15,
-          fontWeight: 600,
-          color: "#fff",
-        }}
-      >
-        Tempo médio por execução
-      </h4>
-      <p
-        style={{
-          margin: "0 0 12px",
-          fontSize: 12,
-          lineHeight: 1.45,
-          color: "#9a9a9a",
-        }}
-      >
-        Ordenado do mais rápido ao mais lento. Eixo em microssegundos (µs).
-      </p>
       <div style={{ width: "100%", height: 240 }}>
         <ResponsiveContainer>
           <BarChart
@@ -83,20 +63,22 @@ export default function BenchmarkTimeChart({
             />
             <Tooltip
               contentStyle={{
-                background: "#2a2a2a",
+                background: "#2A2A2A",
                 border: "1px solid #555",
-                color: "#fff",
               }}
-              formatter={(value) => {
+              itemStyle={{ color: "#fff" }}
+              cursor={{ fill: '#5c5b5b', opacity: 0.2 }}
+              formatter={(value, name) => {
                 const v = Number(value);
-                if (!Number.isFinite(v)) return ["—", "Tempo médio"];
+                if (!Number.isFinite(v)) return ["—", name];
+
                 return [
                   `${v.toFixed(3)} µs (${(v / 1000).toFixed(6)} ms)`,
-                  "Tempo médio",
+                  name,
                 ];
               }}
             />
-            <Bar dataKey="tempoUs" radius={[4, 4, 0, 0]} name="Tempo">
+            <Bar dataKey="tempoUs" radius={[4, 4, 0, 0]} name="Tempo médio">
               {data.map((entry, i) => (
                 <Cell
                   key={`${entry.algorithmId}-${i}`}

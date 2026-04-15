@@ -13,9 +13,9 @@ export const StyledInput = styled.input`
 
 export const StyledLabel = styled.div`
   font-size: 12px;
-  font-weight: 700; /* remover */
+  font-weight: 700;
   background-color: #2a2a2a;
-  border: 1px solid #333333; /* remover */
+  border: 1px solid #333333;
   border-radius: 4px;
   padding: 0px 4px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);

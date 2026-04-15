@@ -87,14 +87,14 @@ export const CreateGraphContainer = styled.div`
   width: 100%;
   gap: 24px;
 
-  p {
+  > p {
     font-size: 16px;
     font-weight: 400;
     color: #ffffff;
     margin: 0px;
   }
 
-  h2 {
+  > h2 {
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
@@ -190,15 +190,14 @@ export const OptionBox = styled.label<{ isSelected: boolean }>`
 export const UploadPanel = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px 0;
+  gap: 24px;
 `;
 
 export const FileSelectButton = styled.button`
   align-self: flex-start;
   padding: 10px 18px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   background: #2d4a8c;
   border: none;
@@ -210,20 +209,19 @@ export const FileSelectButton = styled.button`
   }
 `;
 
-/** Barra acima do canvas na aba do editor. */
 export const EditorToolbar = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8px;
 `;
 
 export const PresetModelButton = styled(FileSelectButton)`
-  background: #3d4f6e;
+  width: 100%;
+  background: #2d4a8c;
 
   &:hover {
-    background: #4d5f82;
+    background: #3a5ba8;
   }
 `;
 
@@ -234,7 +232,7 @@ export const DropZone = styled.div<{ $active: boolean }>`
   justify-content: center;
   gap: 14px;
   min-height: 200px;
-  padding: 36px 28px;
+  padding: 12px 28px;
   border-radius: 12px;
   border: 2px dashed
     ${({ $active }) => ($active ? "#6b8cce" : "#555555")};
@@ -243,8 +241,26 @@ export const DropZone = styled.div<{ $active: boolean }>`
   transition: border-color 0.15s ease, background 0.15s ease;
 `;
 
+export const DropZoneIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -8px;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  color: #9bb4e0;
+
+  & svg {
+    width: 32px;
+    height: 32px;
+  }
+`;
+
 export const DropZoneFileButton = styled(FileSelectButton)`
   align-self: center;
+  font-size: 14px;
+  font-weight: 700;
 `;
 
 export const DropHint = styled.p`
@@ -252,8 +268,15 @@ export const DropHint = styled.p`
   text-align: center;
   font-size: 13px;
   line-height: 1.55;
-  color: #999999;
+  color: #cccccc;
   max-width: 360px;
+`;
+
+export const DropHintDescription = styled.p`
+  margin-top: -8px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #999999;
 `;
 
 export const FormatInstructions = styled.div`
@@ -277,7 +300,7 @@ export const FormatInstructions = styled.div`
 `;
 
 export const JsonExample = styled.pre`
-  margin: 12px 0 0;
+  margin: 0 0 0;
   padding: 14px;
   font-size: 11px;
   line-height: 1.45;
@@ -288,7 +311,7 @@ export const JsonExample = styled.pre`
   color: #c8e0c8;
 `;
 
-export const BenchmarkContainer = styled.div`
+export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -305,6 +328,10 @@ export const BenchmarkContainer = styled.div`
     color: #ffffff;
     margin: 0;
   }
+`;
+
+export const EmptySectionContainer = styled(SectionContainer)`
+  background-color: transparent;
 `;
 
 export const BenchmarkParagraph = styled.p`
@@ -341,12 +368,13 @@ export const StartBenchmarkButton = styled.button`
   align-self: flex-start;
   padding: 10px 20px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   background: #2d4a8c;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  width: 100%;
 
   &:hover:not(:disabled) {
     background: #3a5ba8;
@@ -494,7 +522,6 @@ export const SourceRow = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  max-width: 360px;
 `;
 
 export const SourceLabel = styled.label`
@@ -543,6 +570,108 @@ export const MetricsTitle = styled.h4`
   color: #ffffff;
 `;
 
+export const MetricsAlgoGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 4px;
+`;
+
+export const MetricsAlgoCard = styled.article<{ $accent: string }>`
+  border-radius: 6px 12px 12px 6px;
+  padding: 16px 18px;
+  background: linear-gradient(165deg, #2c2c32 0%, #1f1f24 100%);
+  border: 1px solid #3d3d48;
+  border-left: 4px solid ${({ $accent }) => $accent};
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+`;
+
+export const MetricsAlgoTitle = styled.h4`
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+`;
+
+/** Uma linha sob o título do algoritmo: explica o que as métricas representam. */
+export const MetricsAlgoHint = styled.p`
+  margin: 0 0 14px;
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #8e8e9c;
+`;
+
+export const MetricsStatGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 14px;
+
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const MetricsStat = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+`;
+
+export const MetricsStatLabel = styled.span`
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8b8b9a;
+  line-height: 1.3;
+`;
+
+export const MetricsStatValueRow = styled.div`
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+`;
+
+export const MetricsStatNumber = styled.span`
+  font-size: 17px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #ececf2;
+  line-height: 1.2;
+`;
+
+export const MetricsStatUnit = styled.span`
+  font-size: 12px;
+  font-weight: 500;
+  color: #9a9aa8;
+`;
+
+export const GrowthCurveButton = styled.button`
+  align-self: flex-start;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #2d4a8c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover:not(:disabled) {
+    background: #3a5ba8;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`;
+
 export const SkippedReason = styled.div`
   padding: 12px 14px;
   background: #2a2520;
@@ -550,6 +679,12 @@ export const SkippedReason = styled.div`
   border-radius: 8px;
   color: #e8c9a8;
   font-size: 13px;
+`;
+
+export const DistancesTableContainer = styled.div`
+  display: flex;
+  border: 1px solid #333;
+  border-radius: 8px 8px 0 0;
 `;
 
 export const DistancesTable = styled.table`
@@ -567,7 +702,9 @@ export const DistancesTable = styled.table`
 
   th {
     color: #aaaaaa;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 
   td {
@@ -583,7 +720,6 @@ export const DistancesTableRow = styled.tr<{ $isSource?: boolean }>`
 `;
 
 export const DistancesShowMoreButton = styled.button`
-  margin-top: 10px;
   padding: 8px 14px;
   font-size: 13px;
   font-weight: 600;
@@ -604,9 +740,22 @@ export const ChartSection = styled.div`
   margin-top: 8px;
 `;
 
-export const SubSectionTitle = styled.h4`
-  margin: 16px 0 8px;
+export const ResultsTitle = styled.h3<{ $margin?: string }>`
+  margin: ${({ $margin }) => $margin || "0 0 -8px"};
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #ffffff;
+`;
+
+export const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const SubSectionTitle = styled.h4<{ $margin?: string }>`
+  margin: ${({ $margin }) => $margin || "16px 0 8px"};
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
 `;

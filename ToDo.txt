@@ -1,4 +1,5 @@
-- Adicionar peso nas arestas
-- Adicionar opção de alterar o label das arestas
-- Ajustar o menu lateral e adiiconar o botão de remover nós
-- Impedir de criar conexão redundante no grafo
+# To Do
+
+- Transformar aresta ligadas no mesmo vértice (em sentidos opostos e mesmo peso) na mesma aresta (bidrecional) para simplificar a visualização.
+- Adicionar algoritmos faltantes
+- Melhorar avaliação de benchmark (rever os algoritmos) ver se não da pra forçar dijkstra pra ser o melhor em grafos pequenos

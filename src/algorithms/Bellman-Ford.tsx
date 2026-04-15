@@ -97,7 +97,7 @@ export function bellmanFordWithMetrics(
 
     if (!updated) {
       earlyStopped = true;
-      break;
+      break; // remover para rodar V-1 iterações
     }
   }
 

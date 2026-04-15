@@ -52,7 +52,6 @@ export type GraphProps = {
   counterNodeId: number;
   setCounterNodeId: React.Dispatch<React.SetStateAction<number>>;
   onDownloadGraph?: () => void;
-  /** Chamado após «Apagar tudo» (ex.: limpar resultado do benchmark na página). */
   onGraphCleared?: () => void;
 };
 
