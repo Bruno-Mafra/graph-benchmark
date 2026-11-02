@@ -47,6 +47,18 @@ export const HeaderContent = styled.div`
 
   @media (max-width: 480px) {
     padding: 0px 12px;
+    gap: 10px;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+
+    h1 {
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
   }
 
   @media (max-width: 320px) {
@@ -216,15 +228,6 @@ export const EditorToolbar = styled.div`
   gap: 12px;
 `;
 
-export const PresetModelButton = styled(FileSelectButton)`
-  width: 100%;
-  background: #2d4a8c;
-
-  &:hover {
-    background: #3a5ba8;
-  }
-`;
-
 export const DropZone = styled.div<{ $active: boolean }>`
   display: flex;
   flex-direction: column;
@@ -386,144 +389,7 @@ export const StartBenchmarkButton = styled.button`
   }
 `;
 
-export const ResultsList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-`;
-
 /** Lista ordenada (melhor tempo primeiro) com barras relativas. */
-export const ResultsRankList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
-
-export const ResultRankCard = styled.div<{ $rank: number }>`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 12px 14px;
-  background: ${({ $rank }) =>
-    $rank === 1
-      ? "linear-gradient(145deg, rgba(74, 222, 128, 0.12) 0%, #252525 55%)"
-      : "#2a2a2a"};
-  border-radius: 10px;
-  border: 1px solid
-    ${({ $rank }) =>
-      $rank === 1 ? "rgba(74, 222, 128, 0.4)" : "#3a3a3a"};
-`;
-
-export const ResultRankTopRow = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-`;
-
-export const ResultRankLeft = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
-`;
-
-export const RankBadge = styled.span<{ $rank: number }>`
-  flex-shrink: 0;
-  min-width: 36px;
-  padding: 4px 8px;
-  font-size: 12px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  text-align: center;
-  border-radius: 6px;
-  background: ${({ $rank }) =>
-    $rank === 1 ? "rgba(74, 222, 128, 0.25)" : "#3a3a3a"};
-  color: ${({ $rank }) => ($rank === 1 ? "#b6f5c8" : "#ccc")};
-  border: 1px solid
-    ${({ $rank }) =>
-      $rank === 1 ? "rgba(74, 222, 128, 0.45)" : "#4a4a4a"};
-`;
-
-export const ResultRankLabel = styled.span`
-  font-weight: 600;
-  font-size: 14px;
-  color: #ffffff;
-`;
-
-export const ResultRankTime = styled.span`
-  font-variant-numeric: tabular-nums;
-  color: #a8c4ff;
-  font-weight: 600;
-  font-size: 14px;
-`;
-
-export const PerfBarRow = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
-export const PerfBarTrack = styled.div`
-  flex: 1;
-  min-width: 0;
-  max-width: 320px;
-  height: 9px;
-  border-radius: 5px;
-  background: #1a1a1a;
-  overflow: hidden;
-  border: 1px solid #333;
-`;
-
-export const PerfBarFill = styled.div<{ $widthPct: number; $color: string }>`
-  height: 100%;
-  width: ${({ $widthPct }) => Math.min(100, Math.max(0, $widthPct))}%;
-  background: ${({ $color }) => $color};
-  border-radius: 4px;
-  opacity: 0.92;
-`;
-
-export const PerfBarCaption = styled.span`
-  font-size: 11px;
-  color: #888;
-  line-height: 1.3;
-`;
-
-export const ResultItem = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 14px;
-  background: #2a2a2a;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 14px;
-`;
-
-export const ResultLabel = styled.span`
-  font-weight: 500;
-`;
-
-export const ResultTime = styled.span`
-  font-variant-numeric: tabular-nums;
-  color: #a8c4ff;
-  font-weight: 600;
-`;
-
-export const ResultsHeading = styled.h3`
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
-`;
-
-export const SourceRow = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-`;
-
 export const SourceLabel = styled.label`
   font-size: 13px;
   font-weight: 600;
@@ -538,43 +404,6 @@ export const SourceSelect = styled.select`
   background: #2a2a2a;
   color: #ffffff;
   cursor: pointer;
-`;
-
-export const WarningBanner = styled.div`
-  padding: 12px 14px;
-  border-radius: 8px;
-  background: #3d2a1a;
-  border: 1px solid #8b6914;
-  color: #f5e6c8;
-  font-size: 13px;
-  line-height: 1.45;
-`;
-
-export const MetricsBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 12px 14px;
-  background: #252525;
-  border-radius: 8px;
-  border: 1px solid #333;
-  font-size: 13px;
-  color: #dddddd;
-  line-height: 1.5;
-`;
-
-export const MetricsTitle = styled.h4`
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-`;
-
-export const MetricsAlgoGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  margin-top: 4px;
 `;
 
 export const MetricsAlgoCard = styled.article<{ $accent: string }>`
@@ -594,7 +423,6 @@ export const MetricsAlgoTitle = styled.h4`
   letter-spacing: 0.02em;
 `;
 
-/** Uma linha sob o título do algoritmo: explica o que as métricas representam. */
 export const MetricsAlgoHint = styled.p`
   margin: 0 0 14px;
   font-size: 12px;
@@ -650,28 +478,6 @@ export const MetricsStatUnit = styled.span`
   color: #9a9aa8;
 `;
 
-export const GrowthCurveButton = styled.button`
-  align-self: flex-start;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #ffffff;
-  background: #2d4a8c;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-
-  &:hover:not(:disabled) {
-    background: #3a5ba8;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-`;
-
 export const SkippedReason = styled.div`
   padding: 12px 14px;
   background: #2a2520;
@@ -679,73 +485,6 @@ export const SkippedReason = styled.div`
   border-radius: 8px;
   color: #e8c9a8;
   font-size: 13px;
-`;
-
-export const DistancesTableContainer = styled.div`
-  display: flex;
-  border: 1px solid #333;
-  border-radius: 8px 8px 0 0;
-`;
-
-export const DistancesTable = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  color: #ffffff;
-
-  th,
-  td {
-    padding: 8px 10px;
-    text-align: left;
-    border-bottom: 1px solid #333;
-  }
-
-  th {
-    color: #aaaaaa;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-
-  td {
-    font-variant-numeric: tabular-nums;
-  }
-`;
-
-export const DistancesTableRow = styled.tr<{ $isSource?: boolean }>`
-  background: ${({ $isSource }) =>
-    $isSource ? "rgba(74, 222, 128, 0.14)" : "transparent"};
-  box-shadow: ${({ $isSource }) =>
-    $isSource ? "inset 3px 0 0 #4ade80" : "none"};
-`;
-
-export const DistancesShowMoreButton = styled.button`
-  padding: 8px 14px;
-  font-size: 13px;
-  font-weight: 600;
-  color: #e5e5e5;
-  background: #2a2a2a;
-  border: 1px solid #444;
-  border-radius: 8px;
-  cursor: pointer;
-
-  &:hover {
-    background: #333;
-    border-color: #555;
-  }
-`;
-
-export const ChartSection = styled.div`
-  width: 100%;
-  margin-top: 8px;
-`;
-
-export const ResultsTitle = styled.h3<{ $margin?: string }>`
-  margin: ${({ $margin }) => $margin || "0 0 -8px"};
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-  color: #ffffff;
 `;
 
 export const TitleContainer = styled.div`
@@ -758,4 +497,34 @@ export const SubSectionTitle = styled.h4<{ $margin?: string }>`
   font-size: 15px;
   font-weight: 700;
   color: #ffffff;
+`;
+export const TabBar = styled.nav`
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+  padding: 4px;
+  border-radius: 10px;
+  background: #242424;
+  border: 1px solid #333333;
+`;
+
+export const TabButton = styled.button<{ $active: boolean }>`
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 7px;
+  border: none;
+  color: ${({ $active }) => ($active ? "#ffffff" : "#aaaaaa")};
+  background: ${({ $active }) => ($active ? "#2d4a8c" : "transparent")};
+  cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    background: ${({ $active }) => ($active ? "#3a5ba8" : "#333333")};
+  }
+
+  @media (max-width: 480px) {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
 `;
