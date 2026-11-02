@@ -1,0 +1,78 @@
+Universidade Federal do ABC
+Centro de Matemática, Computação e Cognição
+Bacharelado em Ciência da Computação
+
+Relatório Parcial - PGC I
+
+Desenvolvimento de ferramenta de benchmark para algoritmos de caminho mais curto
+Aluno(a): Bruno Francisco Rodrigues Mafra
+Orientador: Majid Forghani Elahabad
+
+Resumo
+Nesta etapa do trabalho, o foco desloca-se da revisão teórica isolada para o desenvolvimento de uma ferramenta de benchmark voltada ao problema do caminho mais curto em grafos ponderados. A aplicação é construída como interface web, de modo que o usuário possa montar ou carregar um grafo, escolher a origem e quais algoritmos deseja comparar, e então inspecionar tempos de execução estimados, distâncias calculadas e algumas métricas auxiliares que ajudam a interpretar o comportamento de cada método.
+Na implementação atual, estão integrados dois algoritmos clássicos de fonte única: Dijkstra, adequado a pesos não negativos, e Bellman-Ford, que admite pesos negativos e ainda sinaliza a presença de ciclo negativo quando esse caso ocorre. A ferramenta trata explicitamente a incompatibilidade do Dijkstra com arestas de peso negativo, evitando executá-lo nesses cenários e informando o motivo ao usuário.
+Além do editor visual, há suporte a importação e exportação de grafos em arquivo JSON com convenção própria, geração de grafos de exemplo (esparsos, densos, lineares, em grade, com pesos negativos ou ciclo negativo, entre outros) e um experimento complementar de curva de crescimento, em que se mede o tempo médio sobre grafos esparsos aleatórios gerados em memória para diferentes valores de |V|. Os resultados são apresentados por meio de tabelas, ranking relativo de tempo e gráficos de barras e de linha.
+O objetivo deste relatório parcial é descrever, em linha com o escopo de um TCC, o propósito da ferramenta, seu funcionamento geral, os algoritmos e bibliotecas adotados e as análises que já podem ser obtidas na versão atual do sistema, sem adentrar detalhes internos de implementação de terceiros.
+
+1 - Objetivo e funcionamento geral da ferramenta
+
+1.1 - Objetivo
+A ferramenta de benchmark tem como objetivo central permitir que o usuário experimente, no mesmo ambiente, o cálculo de caminhos mínimos a partir de um vértice de origem e compare o desempenho prático de abordagens distintas sobre o mesmo grafo ou sobre famílias de grafos geradas automaticamente. Em termos de uso, busca-se unir a construção intuitiva do modelo (vértices, arestas direcionadas e pesos) com feedback quantitativo simples de interpretar, aproximando-se da proposta inicial do projeto de contar com gráficos e tabelas para apoiar discussões sobre eficiência e limitações de cada algoritmo.
+
+1.2 - Funcionamento geral
+O fluxo principal consiste em definir o grafo no editor, escolher o índice do vértice de origem, marcar quais algoritmos entram na comparação e acionar a execução do benchmark. O grafo construído na tela é convertido internamente para uma representação em lista de adjacência, compatível com as rotinas de caminho mínimo. Após a execução, a interface apresenta, para cada algoritmo selecionado, o tempo médio por execução obtido por repetição em laço até que o bloco de medição atinja um tempo mínimo aproximado, o que reduz ruído de medições muito curtas em grafos pequenos.
+Quando o grafo possui alguma aresta com peso negativo, o Dijkstra não é executado e o sistema registra essa omissão com uma justificativa clara, enquanto o Bellman-Ford continua disponível para o mesmo cenário. Os vetores de distância podem ser exibidos em tabela, com opção de expandir a visualização quando o número de vértices é grande. Há ainda um ranking visual dos tempos medidos e gráficos que consolidam os resultados da última rodada.
+A importação de grafos ocorre por arquivo JSON estruturado (com extensão convencionada no projeto), contendo identificadores de nós, rótulos, posições opcionais e arestas com peso; a exportação grava o estado atual do editor no mesmo formato, o que facilita salvar cenários de teste. O usuário pode optar por trabalhar apenas com importação, sem canvas de edição, ou utilizar o modo completo com arrastar e soltar de arquivos na área indicada. Também existe um diálogo de “grafos predefinidos”, que instancia automaticamente topologias como grafo esparso, denso, linear, grade, cenários com pesos negativos, com ciclo negativo ou desconexo, com limites de tamanho pensados para manter a interface responsiva.
+Por fim, a curva de crescimento executa, para uma sequência fixa de valores de |V|, a geração de um grafo esparso aleatório em memória, o benchmark com origem fixa no índice zero e o registro dos tempos médios; entre cada tamanho é cedido um intervalo ao navegador para não bloquear totalmente a interface durante experimentos maiores.
+
+Imagem 1 - Interface da ferramenta de benchmark (grafo no editor, opções de algoritmo e área de resultados)
+
+2 - Algoritmos implementados, bibliotecas e análises de desempenho
+
+2.1 - Dijkstra
+O algoritmo de Dijkstra implementado na ferramenta calcula as menores distâncias da origem a todos os vértices alcançáveis em um grafo com pesos nas arestas, assumindo que não há pesos negativos. A lógica segue o esquema clássico de relaxamento guiado por uma fila de prioridade sobre pares (distância provisória, vértice), de forma a sempre processar primeiro o vértice com menor estimativa atual. Para essa fila de prioridade utiliza-se a biblioteca heap-js, que fornece uma estrutura de heap configurável com o critério de ordenação adequado ao Dijkstra, enquanto o fluxo do algoritmo e o controle do grafo permanecem no código do projeto.
+Em paralelo à execução usada na medição de tempo, existe uma variante instrumentada que acumula métricas como número de relaxamentos bem-sucedidos, inserções e extrações no heap, além de estatísticas de tamanho da estrutura, o que enriquece a análise qualitativa do comportamento do método sem substituir a medida de tempo na máquina do usuário.
+
+2.2 - Bellman-Ford
+O Bellman-Ford implementado percorre o grafo repetindo relaxamentos sobre todas as arestas, até no máximo |V|−1 rodadas externas, com parada antecipada quando uma rodada completa não altera distâncias. Essa estratégia garante corretude em presença de pesos negativos, desde que não exista ciclo de soma negativa alcançável. Após as iterações principais, realiza-se uma verificação adicional: se ainda for possível diminuir alguma distância, conclui-se que há ciclo negativo e esse flag é exibido ao usuário.
+Também há uma versão com métricas, que contabiliza relaxamentos bem-sucedidos, número de iterações externas efetivamente utilizadas e se houve parada antecipada, permitindo relacionar o custo observado à estrutura do grafo (por exemplo, convergência rápida em grafos que estabilizam cedo).
+
+2.3 - Algoritmos não incluídos na versão atual
+Embora o trabalho teórico de referência mencione outros métodos clássicos, como Floyd-Warshall e Johnson para todos os pares, esses algoritmos ainda não fazem parte do código da ferramenta nesta fase. A comparação prática concentra-se, portanto, no contraste entre Dijkstra e Bellman-Ford sob a perspectiva de fonte única, o que já permite discutir trade-offs importantes entre eficiência típica em grafos sem pesos negativos e flexibilidade do Bellman-Ford frente a pesos negativos e detecção de ciclo negativo.
+
+2.4 - Bibliotecas e tecnologias empregadas
+
+2.4.1 - Ecossistema Web e linguagem
+O projeto é escrito em TypeScript e empacotado com Vite, o que oferece ambiente de desenvolvimento rápido e build moderno para o navegador. A interface é organizada em componentes React, favorecendo a separação entre a área de edição do grafo, painéis de opções e seções de resultados.
+
+2.4.2 - Visualização do grafo e da interface
+Para a manipulação visual de nós e arestas utiliza-se a biblioteca React Flow, que fornece primitivas para grafos interativos (posicionamento, conexões, tipos de nó e aresta personalizados). Sobre essa base, o projeto define nós circulares, arestas com peso editável e conversões entre o modelo visual e a lista de adjacência usada pelos algoritmos.
+
+2.4.3 - Estilização, notificações e gráficos
+A estilização das telas é feita com styled-components, permitindo componentes com estilos encapsulados e consistentes com o layout geral da aplicação. Mensagens de aviso ou confirmação de operações (como importação ou geração de grafos muito grandes) podem ser exibidas com react-toastify. Para os gráficos de tempo na última execução e da curva de crescimento em função de |V|, utiliza-se a biblioteca Recharts, que oferece componentes de gráficos cartesianos integrados ao React.
+
+2.4.4 - Estruturas auxiliares
+Como mencionado, o Dijkstra se vale da biblioteca heap-js para a fila de prioridade. Trata-se de uma dependência pontual que evita reimplementar manualmente toda a estrutura de heap, mantendo o foco do código nas regras do algoritmo e nas métricas de desempenho.
+
+2.5 - Resultados e análises possíveis na versão atual
+
+2.5.1 - Tempo de execução e ranking
+A saída principal de desempenho é o tempo médio por chamada ao algoritmo, derivado de medições repetidas no próprio navegador. A interface ordena os métodos do mais rápido ao mais lento e apresenta barras proporcionais, o que facilita comparações relativas no mesmo hardware e no mesmo grafo.
+
+2.5.2 - Distâncias e validade das execuções
+As distâncias da origem a cada vértice são mostradas quando o algoritmo conclui normalmente; valores infinitos representam vértices inalcançáveis. No Bellman-Ford, o indicador de ciclo negativo alerta para resultados que não correspondem a um modelo de custos mínimos bem definido no sentido clássico.
+
+2.5.3 - Métricas complementares
+As métricas específicas de cada algoritmo permitem comentar, por exemplo, quantos relaxamentos ocorreram ou como a fila de prioridade cresceu ao longo da execução do Dijkstra, servindo como apoio conceitual às diferenças de tempo observadas, embora não substituam análise assintótica formal.
+
+2.5.4 - Curva de crescimento em grafos esparsos aleatórios
+O experimento de crescimento gera, para cada tamanho configurado na ferramenta, um grafo esparso aleatório com uma aresta de saída típica por vértice e pesos inteiros positivos em faixa limitada, mede os tempos médios e exibe a evolução em gráfico de linhas. Isso permite observar empiricamente como os tempos se comportam à medida que |V| aumenta, sempre com a ressalva de que trata-se de medição em ambiente de navegador, sujeita a variações de máquina e de carga do sistema.
+
+3 - Conclusão
+A ferramenta de benchmark já cumpre um papel central no TCC ao integrar, em um único aplicativo web, a modelagem de grafos, a execução dos algoritmos de caminho mais curto implementados no repositório, a política explícita de segurança para o Dijkstra com pesos negativos e a visualização de resultados por tabelas e gráficos. A inclusão de importação e exportação JSON, de presets topológicos e do experimento de curva de crescimento amplia o leque de cenários reproduzíveis para discussão no texto final.
+Os próximos passos naturais, caso o cronograma permita, seriam estender o conjunto de algoritmos (por exemplo, métodos para todos os pares), refinar ainda mais os experimentos controlados e consolidar, no documento de conclusão do curso, uma análise interpretativa dos gráficos obtidos em máquinas e grafos padronizados. Por ora, o desenvolvimento está alinhado ao objetivo de oferecer uma base sólida para comparar Dijkstra e Bellman-Ford de maneira didática e mensurável.
+
+4 - Referências
+Harem Mahdi Hadi, and Ibrahim Mahmood Ibrahim. 2025. “A Comprehensive Review of Shortest Path Algorithms for Network Routing”. Asian Journal of Research in Computer Science 18 (3):152–175. https://doi.org/10.9734/ajrcos/2025/v18i3584.
+LINTZMAYER, Carla Negri; MOTA, Guilherme Oliveira. Análise de Algoritmos e de Estruturas de Dados. Versão de 8 fev. 2025. Manuscrito, UFABC e USP, 2025.
+DUAN, Ran; MAO, Jiayi; MAO, Xiao; SHU, Xinkai; YIN, Longhui. Breaking the Sorting Barrier for Directed Single-Source Shortest Paths. 2025. Disponível em: arXiv:2504.17033.

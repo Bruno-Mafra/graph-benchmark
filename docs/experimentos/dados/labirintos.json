@@ -1,0 +1,7432 @@
+{
+ "environment": {
+  "date": "2026-11-02T18:28:14.241Z",
+  "node": "v22.13.1",
+  "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+  "cores": 16,
+  "platform": "linux 6.6.87.2-microsoft-standard-WSL2",
+  "memoryGB": 15
+ },
+ "results": [
+  {
+   "experiment": "M1",
+   "scenario": "M1-N21",
+   "description": "Labirinto gerado 21×21 (braid 0,08)",
+   "x": 21,
+   "size": 21,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 48,
+   "pathCells": 49,
+   "timeMs": 0.010826746093749895,
+   "timedRuns": 256,
+   "expansions": 259,
+   "operations": {
+    "relaxations": 258,
+    "heapPushes": 259,
+    "heapPops": 259
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 0.010826746093749895,
+     "nodeExpansions": 259
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N51",
+   "description": "Labirinto gerado 51×51 (braid 0,08)",
+   "x": 51,
+   "size": 51,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 150,
+   "pathCells": 151,
+   "timeMs": 0.054352734375000544,
+   "timedRuns": 64,
+   "expansions": 1429,
+   "operations": {
+    "relaxations": 1429,
+    "heapPushes": 1430,
+    "heapPops": 1429
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 0.054352734375000544,
+     "nodeExpansions": 1429
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N101",
+   "description": "Labirinto gerado 101×101 (braid 0,08)",
+   "x": 101,
+   "size": 101,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 280,
+   "pathCells": 281,
+   "timeMs": 0.30124406250000035,
+   "timedRuns": 16,
+   "expansions": 5510,
+   "operations": {
+    "relaxations": 5511,
+    "heapPushes": 5512,
+    "heapPops": 5510
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 280,
+     "pathCells": 281,
+     "timeMs": 0.30124406250000035,
+     "nodeExpansions": 5510
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N201",
+   "description": "Labirinto gerado 201×201 (braid 0,08)",
+   "x": 201,
+   "size": 201,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 538,
+   "pathCells": 539,
+   "timeMs": 1.4211705000000165,
+   "timedRuns": 4,
+   "expansions": 21694,
+   "operations": {
+    "relaxations": 21693,
+    "heapPushes": 21694,
+    "heapPops": 21694
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 538,
+     "pathCells": 539,
+     "timeMs": 1.4211705000000165,
+     "nodeExpansions": 21694
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N401",
+   "description": "Labirinto gerado 401×401 (braid 0,08)",
+   "x": 401,
+   "size": 401,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 1014,
+   "pathCells": 1015,
+   "timeMs": 6.242798999999991,
+   "timedRuns": 1,
+   "expansions": 85664,
+   "operations": {
+    "relaxations": 85663,
+    "heapPushes": 85664,
+    "heapPops": 85664
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 1014,
+     "pathCells": 1015,
+     "timeMs": 6.242798999999991,
+     "nodeExpansions": 85664
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N801",
+   "description": "Labirinto gerado 801×801 (braid 0,08)",
+   "x": 801,
+   "size": 801,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2056,
+   "pathCells": 2057,
+   "timeMs": 30.33522800000003,
+   "timedRuns": 1,
+   "expansions": 341513,
+   "operations": {
+    "relaxations": 341512,
+    "heapPushes": 341513,
+    "heapPops": 341513
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2056,
+     "pathCells": 2057,
+     "timeMs": 30.33522800000003,
+     "nodeExpansions": 341513
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-open",
+   "description": "Grid aberto (sem obstáculos)",
+   "x": 0,
+   "size": 101,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.5524985000000129,
+   "timedRuns": 4,
+   "expansions": 10201,
+   "operations": {
+    "relaxations": 10200,
+    "heapPushes": 10201,
+    "heapPops": 10201
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.5524985000000129,
+     "nodeExpansions": 10201
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand25",
+   "description": "Obstáculos aleatórios 25%",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.5548502499999586,
+   "timedRuns": 4,
+   "expansions": 7481,
+   "operations": {
+    "relaxations": 7480,
+    "heapPushes": 7481,
+    "heapPops": 7481
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.5548502499999586,
+     "nodeExpansions": 7481
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand40",
+   "description": "Obstáculos aleatórios 40%",
+   "x": 2,
+   "size": 101,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 288,
+   "pathCells": 289,
+   "timeMs": 0.20144068749999633,
+   "timedRuns": 16,
+   "expansions": 3729,
+   "operations": {
+    "relaxations": 3742,
+    "heapPushes": 3743,
+    "heapPops": 3729
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 0.20144068749999633,
+     "nodeExpansions": 3729
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-perfect",
+   "description": "Labirinto perfeito (braid 0)",
+   "x": 3,
+   "size": 101,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2628,
+   "pathCells": 2629,
+   "timeMs": 0.1792493749999977,
+   "timedRuns": 16,
+   "expansions": 5201,
+   "operations": {
+    "relaxations": 5200,
+    "heapPushes": 5201,
+    "heapPops": 5201
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 0.1792493749999977,
+     "nodeExpansions": 5201
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid08",
+   "description": "Labirinto braid 0,08",
+   "x": 4,
+   "size": 101,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 312,
+   "pathCells": 313,
+   "timeMs": 0.29400474999999915,
+   "timedRuns": 16,
+   "expansions": 5517,
+   "operations": {
+    "relaxations": 5517,
+    "heapPushes": 5518,
+    "heapPops": 5517
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 312,
+     "pathCells": 313,
+     "timeMs": 0.29400474999999915,
+     "nodeExpansions": 5517
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid30",
+   "description": "Labirinto braid 0,30",
+   "x": 5,
+   "size": 101,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.4231554375000002,
+   "timedRuns": 16,
+   "expansions": 6388,
+   "operations": {
+    "relaxations": 6388,
+    "heapPushes": 6389,
+    "heapPops": 6388
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.4231554375000002,
+     "nodeExpansions": 6388
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-utrap",
+   "description": "Armadilha em U (grid aberto)",
+   "x": 6,
+   "size": 101,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 142,
+   "pathCells": 143,
+   "timeMs": 0.700819249999995,
+   "timedRuns": 4,
+   "expansions": 9973,
+   "operations": {
+    "relaxations": 9995,
+    "heapPushes": 9996,
+    "heapPops": 9973
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 0.700819249999995,
+     "nodeExpansions": 9973
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d25",
+   "description": "201×201, 25% obstáculos, destino a 25 passos do centro",
+   "x": 25,
+   "size": 201,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 25,
+   "pathCells": 26,
+   "timeMs": 0.05183689062499752,
+   "timedRuns": 64,
+   "expansions": 673,
+   "operations": {
+    "relaxations": 735,
+    "heapPushes": 736,
+    "heapPops": 673
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 25,
+     "pathCells": 26,
+     "timeMs": 0.05183689062499752,
+     "nodeExpansions": 673
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d50",
+   "description": "201×201, 25% obstáculos, destino a 50 passos do centro",
+   "x": 50,
+   "size": 201,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 50,
+   "pathCells": 51,
+   "timeMs": 0.21003575000000296,
+   "timedRuns": 16,
+   "expansions": 3028,
+   "operations": {
+    "relaxations": 3161,
+    "heapPushes": 3162,
+    "heapPops": 3028
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 0.21003575000000296,
+     "nodeExpansions": 3028
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d100",
+   "description": "201×201, 25% obstáculos, destino a 100 passos do centro",
+   "x": 100,
+   "size": 201,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 1.2010162500000092,
+   "timedRuns": 4,
+   "expansions": 13096,
+   "operations": {
+    "relaxations": 13359,
+    "heapPushes": 13360,
+    "heapPops": 13096
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 1.2010162500000092,
+     "nodeExpansions": 13096
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d200",
+   "description": "201×201, 25% obstáculos, destino a 200 passos do centro",
+   "x": 200,
+   "size": 201,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 2.694441000000097,
+   "timedRuns": 1,
+   "expansions": 30141,
+   "operations": {
+    "relaxations": 30146,
+    "heapPushes": 30147,
+    "heapPops": 30141
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 2.694441000000097,
+     "nodeExpansions": 30141
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze41",
+   "description": "Labirinto 41×41 (braid 0,08)",
+   "x": 0,
+   "size": 41,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 102,
+   "pathCells": 103,
+   "timeMs": 0.03570103125000301,
+   "timedRuns": 64,
+   "expansions": 944,
+   "operations": {
+    "relaxations": 943,
+    "heapPushes": 944,
+    "heapPops": 944
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 0.03570103125000301,
+     "nodeExpansions": 944
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 258,
+   "pathCells": 259,
+   "timeMs": 0.3056392500000129,
+   "timedRuns": 16,
+   "expansions": 5545,
+   "operations": {
+    "relaxations": 5545,
+    "heapPushes": 5546,
+    "heapPops": 5545
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 258,
+     "pathCells": 259,
+     "timeMs": 0.3056392500000129,
+     "nodeExpansions": 5545
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-rand25-51",
+   "description": "Grid 51×51 com 25% de obstáculos",
+   "x": 2,
+   "size": 51,
+   "algorithmId": "dijkstra",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 0.08794728124999551,
+   "timedRuns": 64,
+   "expansions": 1871,
+   "operations": {
+    "relaxations": 1870,
+    "heapPushes": 1871,
+    "heapPops": 1871
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 0.08794728124999551,
+     "nodeExpansions": 1871
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N21",
+   "description": "Labirinto gerado 21×21 (braid 0,08)",
+   "x": 21,
+   "size": 21,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 48,
+   "pathCells": 49,
+   "timeMs": 0.005944359374999986,
+   "timedRuns": 1024,
+   "expansions": 259,
+   "operations": {
+    "enqueues": 259
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 0.005944359374999986,
+     "nodeExpansions": 259
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N51",
+   "description": "Labirinto gerado 51×51 (braid 0,08)",
+   "x": 51,
+   "size": 51,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 150,
+   "pathCells": 151,
+   "timeMs": 0.031415093749999734,
+   "timedRuns": 64,
+   "expansions": 1429,
+   "operations": {
+    "enqueues": 1430
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 0.031415093749999734,
+     "nodeExpansions": 1429
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N101",
+   "description": "Labirinto gerado 101×101 (braid 0,08)",
+   "x": 101,
+   "size": 101,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 280,
+   "pathCells": 281,
+   "timeMs": 0.20793600000000012,
+   "timedRuns": 16,
+   "expansions": 5510,
+   "operations": {
+    "enqueues": 5512
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 280,
+     "pathCells": 281,
+     "timeMs": 0.20793600000000012,
+     "nodeExpansions": 5510
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N201",
+   "description": "Labirinto gerado 201×201 (braid 0,08)",
+   "x": 201,
+   "size": 201,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 538,
+   "pathCells": 539,
+   "timeMs": 0.5716297499999996,
+   "timedRuns": 4,
+   "expansions": 21693,
+   "operations": {
+    "enqueues": 21694
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 538,
+     "pathCells": 539,
+     "timeMs": 0.5716297499999996,
+     "nodeExpansions": 21693
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N401",
+   "description": "Labirinto gerado 401×401 (braid 0,08)",
+   "x": 401,
+   "size": 401,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 1014,
+   "pathCells": 1015,
+   "timeMs": 2.3668910000000096,
+   "timedRuns": 1,
+   "expansions": 85664,
+   "operations": {
+    "enqueues": 85664
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 1014,
+     "pathCells": 1015,
+     "timeMs": 2.3668910000000096,
+     "nodeExpansions": 85664
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N801",
+   "description": "Labirinto gerado 801×801 (braid 0,08)",
+   "x": 801,
+   "size": 801,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2056,
+   "pathCells": 2057,
+   "timeMs": 10.04891299999997,
+   "timedRuns": 1,
+   "expansions": 341513,
+   "operations": {
+    "enqueues": 341513
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2056,
+     "pathCells": 2057,
+     "timeMs": 10.04891299999997,
+     "nodeExpansions": 341513
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-open",
+   "description": "Grid aberto (sem obstáculos)",
+   "x": 0,
+   "size": 101,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.19163281250000352,
+   "timedRuns": 16,
+   "expansions": 10201,
+   "operations": {
+    "enqueues": 10201
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.19163281250000352,
+     "nodeExpansions": 10201
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand25",
+   "description": "Obstáculos aleatórios 25%",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.16734181249999835,
+   "timedRuns": 16,
+   "expansions": 7481,
+   "operations": {
+    "enqueues": 7481
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.16734181249999835,
+     "nodeExpansions": 7481
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand40",
+   "description": "Obstáculos aleatórios 40%",
+   "x": 2,
+   "size": 101,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 288,
+   "pathCells": 289,
+   "timeMs": 0.08069368749999839,
+   "timedRuns": 64,
+   "expansions": 3722,
+   "operations": {
+    "enqueues": 3737
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 0.08069368749999839,
+     "nodeExpansions": 3722
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-perfect",
+   "description": "Labirinto perfeito (braid 0)",
+   "x": 3,
+   "size": 101,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2628,
+   "pathCells": 2629,
+   "timeMs": 0.1280301874999985,
+   "timedRuns": 64,
+   "expansions": 5201,
+   "operations": {
+    "enqueues": 5201
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 0.1280301874999985,
+     "nodeExpansions": 5201
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid08",
+   "description": "Labirinto braid 0,08",
+   "x": 4,
+   "size": 101,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 312,
+   "pathCells": 313,
+   "timeMs": 0.12355170312500086,
+   "timedRuns": 64,
+   "expansions": 5517,
+   "operations": {
+    "enqueues": 5518
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 312,
+     "pathCells": 313,
+     "timeMs": 0.12355170312500086,
+     "nodeExpansions": 5517
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid30",
+   "description": "Labirinto braid 0,30",
+   "x": 5,
+   "size": 101,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.1518543749999992,
+   "timedRuns": 16,
+   "expansions": 6387,
+   "operations": {
+    "enqueues": 6389
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.1518543749999992,
+     "nodeExpansions": 6387
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-utrap",
+   "description": "Armadilha em U (grid aberto)",
+   "x": 6,
+   "size": 101,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 142,
+   "pathCells": 143,
+   "timeMs": 0.1901511874999926,
+   "timedRuns": 16,
+   "expansions": 9960,
+   "operations": {
+    "enqueues": 9980
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 0.1901511874999926,
+     "nodeExpansions": 9960
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d25",
+   "description": "201×201, 25% obstáculos, destino a 25 passos do centro",
+   "x": 25,
+   "size": 201,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 25,
+   "pathCells": 26,
+   "timeMs": 0.017281386718750014,
+   "timedRuns": 256,
+   "expansions": 620,
+   "operations": {
+    "enqueues": 678
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 25,
+     "pathCells": 26,
+     "timeMs": 0.017281386718750014,
+     "nodeExpansions": 620
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d50",
+   "description": "201×201, 25% obstáculos, destino a 50 passos do centro",
+   "x": 50,
+   "size": 201,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 50,
+   "pathCells": 51,
+   "timeMs": 0.06197982812500058,
+   "timedRuns": 64,
+   "expansions": 3038,
+   "operations": {
+    "enqueues": 3165
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 0.06197982812500058,
+     "nodeExpansions": 3038
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d100",
+   "description": "201×201, 25% obstáculos, destino a 100 passos do centro",
+   "x": 100,
+   "size": 201,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 0.3264505624999998,
+   "timedRuns": 16,
+   "expansions": 12968,
+   "operations": {
+    "enqueues": 13221
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 0.3264505624999998,
+     "nodeExpansions": 12968
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d200",
+   "description": "201×201, 25% obstáculos, destino a 200 passos do centro",
+   "x": 200,
+   "size": 201,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.797331999999983,
+   "timedRuns": 4,
+   "expansions": 30136,
+   "operations": {
+    "enqueues": 30143
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.797331999999983,
+     "nodeExpansions": 30136
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze41",
+   "description": "Labirinto 41×41 (braid 0,08)",
+   "x": 0,
+   "size": 41,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 102,
+   "pathCells": 103,
+   "timeMs": 0.017121945312499776,
+   "timedRuns": 256,
+   "expansions": 943,
+   "operations": {
+    "enqueues": 944
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 0.017121945312499776,
+     "nodeExpansions": 943
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 258,
+   "pathCells": 259,
+   "timeMs": 0.11956651562499943,
+   "timedRuns": 64,
+   "expansions": 5545,
+   "operations": {
+    "enqueues": 5546
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 258,
+     "pathCells": 259,
+     "timeMs": 0.11956651562499943,
+     "nodeExpansions": 5545
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-rand25-51",
+   "description": "Grid 51×51 com 25% de obstáculos",
+   "x": 2,
+   "size": 51,
+   "algorithmId": "bfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 0.03567050000000194,
+   "timedRuns": 64,
+   "expansions": 1871,
+   "operations": {
+    "enqueues": 1871
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 0.03567050000000194,
+     "nodeExpansions": 1871
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N21",
+   "description": "Labirinto gerado 21×21 (braid 0,08)",
+   "x": 21,
+   "size": 21,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 48,
+   "pathCells": 49,
+   "timeMs": 0.007415914062500029,
+   "timedRuns": 1024,
+   "expansions": 198,
+   "operations": {
+    "enqueues": 218
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 0.007415914062500029,
+     "nodeExpansions": 198
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N51",
+   "description": "Labirinto gerado 51×51 (braid 0,08)",
+   "x": 51,
+   "size": 51,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 150,
+   "pathCells": 151,
+   "timeMs": 0.05697896875000019,
+   "timedRuns": 64,
+   "expansions": 1120,
+   "operations": {
+    "enqueues": 1162
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 0.05697896875000019,
+     "nodeExpansions": 1120
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N101",
+   "description": "Labirinto gerado 101×101 (braid 0,08)",
+   "x": 101,
+   "size": 101,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 280,
+   "pathCells": 281,
+   "timeMs": 0.09343046875000027,
+   "timedRuns": 64,
+   "expansions": 4024,
+   "operations": {
+    "enqueues": 4086
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 280,
+     "pathCells": 281,
+     "timeMs": 0.09343046875000027,
+     "nodeExpansions": 4024
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N201",
+   "description": "Labirinto gerado 201×201 (braid 0,08)",
+   "x": 201,
+   "size": 201,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 538,
+   "pathCells": 539,
+   "timeMs": 0.5023610000000076,
+   "timedRuns": 4,
+   "expansions": 15801,
+   "operations": {
+    "enqueues": 15940
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 538,
+     "pathCells": 539,
+     "timeMs": 0.5023610000000076,
+     "nodeExpansions": 15801
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N401",
+   "description": "Labirinto gerado 401×401 (braid 0,08)",
+   "x": 401,
+   "size": 401,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 1014,
+   "pathCells": 1015,
+   "timeMs": 2.208150000000046,
+   "timedRuns": 1,
+   "expansions": 65947,
+   "operations": {
+    "enqueues": 66234
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 1014,
+     "pathCells": 1015,
+     "timeMs": 2.208150000000046,
+     "nodeExpansions": 65947
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N801",
+   "description": "Labirinto gerado 801×801 (braid 0,08)",
+   "x": 801,
+   "size": 801,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2056,
+   "pathCells": 2057,
+   "timeMs": 8.954863000000046,
+   "timedRuns": 1,
+   "expansions": 262250,
+   "operations": {
+    "enqueues": 262800
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2056,
+     "pathCells": 2057,
+     "timeMs": 8.954863000000046,
+     "nodeExpansions": 262250
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-open",
+   "description": "Grid aberto (sem obstáculos)",
+   "x": 0,
+   "size": 101,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.21570399999999523,
+   "timedRuns": 16,
+   "expansions": 10100,
+   "operations": {
+    "enqueues": 10302
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.21570399999999523,
+     "nodeExpansions": 10100
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand25",
+   "description": "Obstáculos aleatórios 25%",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.15574106250000597,
+   "timedRuns": 16,
+   "expansions": 6336,
+   "operations": {
+    "enqueues": 6459
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.15574106250000597,
+     "nodeExpansions": 6336
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand40",
+   "description": "Obstáculos aleatórios 40%",
+   "x": 2,
+   "size": 101,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 288,
+   "pathCells": 289,
+   "timeMs": 0.0624380468750001,
+   "timedRuns": 64,
+   "expansions": 2701,
+   "operations": {
+    "enqueues": 2745
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 0.0624380468750001,
+     "nodeExpansions": 2701
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-perfect",
+   "description": "Labirinto perfeito (braid 0)",
+   "x": 3,
+   "size": 101,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2628,
+   "pathCells": 2629,
+   "timeMs": 0.13560487499999851,
+   "timedRuns": 16,
+   "expansions": 4980,
+   "operations": {
+    "enqueues": 4990
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 0.13560487499999851,
+     "nodeExpansions": 4980
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid08",
+   "description": "Labirinto braid 0,08",
+   "x": 4,
+   "size": 101,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 312,
+   "pathCells": 313,
+   "timeMs": 0.07599651562500043,
+   "timedRuns": 64,
+   "expansions": 3307,
+   "operations": {
+    "enqueues": 3372
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 312,
+     "pathCells": 313,
+     "timeMs": 0.07599651562500043,
+     "nodeExpansions": 3307
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid30",
+   "description": "Labirinto braid 0,30",
+   "x": 5,
+   "size": 101,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.12548754687500008,
+   "timedRuns": 64,
+   "expansions": 5243,
+   "operations": {
+    "enqueues": 5361
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.12548754687500008,
+     "nodeExpansions": 5243
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-utrap",
+   "description": "Armadilha em U (grid aberto)",
+   "x": 6,
+   "size": 101,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 142,
+   "pathCells": 143,
+   "timeMs": 0.16856287499999212,
+   "timedRuns": 16,
+   "expansions": 7670,
+   "operations": {
+    "enqueues": 7855
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 0.16856287499999212,
+     "nodeExpansions": 7670
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d25",
+   "description": "201×201, 25% obstáculos, destino a 25 passos do centro",
+   "x": 25,
+   "size": 201,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 25,
+   "pathCells": 26,
+   "timeMs": 0.022326800781249823,
+   "timedRuns": 256,
+   "expansions": 282,
+   "operations": {
+    "enqueues": 336
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 25,
+     "pathCells": 26,
+     "timeMs": 0.022326800781249823,
+     "nodeExpansions": 282
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d50",
+   "description": "201×201, 25% obstáculos, destino a 50 passos do centro",
+   "x": 50,
+   "size": 201,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 50,
+   "pathCells": 51,
+   "timeMs": 0.04321320312499921,
+   "timedRuns": 64,
+   "expansions": 1355,
+   "operations": {
+    "enqueues": 1476
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 0.04321320312499921,
+     "nodeExpansions": 1355
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d100",
+   "description": "201×201, 25% obstáculos, destino a 100 passos do centro",
+   "x": 100,
+   "size": 201,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 0.12820831250000708,
+   "timedRuns": 16,
+   "expansions": 5102,
+   "operations": {
+    "enqueues": 5297
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 0.12820831250000708,
+     "nodeExpansions": 5102
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d200",
+   "description": "201×201, 25% obstáculos, destino a 200 passos do centro",
+   "x": 200,
+   "size": 201,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.2884084999999885,
+   "timedRuns": 16,
+   "expansions": 10274,
+   "operations": {
+    "enqueues": 10500
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.2884084999999885,
+     "nodeExpansions": 10274
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze41",
+   "description": "Labirinto 41×41 (braid 0,08)",
+   "x": 0,
+   "size": 41,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 102,
+   "pathCells": 103,
+   "timeMs": 0.015502316406250216,
+   "timedRuns": 256,
+   "expansions": 696,
+   "operations": {
+    "enqueues": 731
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 0.015502316406250216,
+     "nodeExpansions": 696
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 258,
+   "pathCells": 259,
+   "timeMs": 0.09111435937499834,
+   "timedRuns": 64,
+   "expansions": 3937,
+   "operations": {
+    "enqueues": 4011
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 258,
+     "pathCells": 259,
+     "timeMs": 0.09111435937499834,
+     "nodeExpansions": 3937
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-rand25-51",
+   "description": "Grid 51×51 com 25% de obstáculos",
+   "x": 2,
+   "size": 51,
+   "algorithmId": "bidirectionalBfs",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 0.03134292187500165,
+   "timedRuns": 64,
+   "expansions": 1457,
+   "operations": {
+    "enqueues": 1515
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 0.03134292187500165,
+     "nodeExpansions": 1457
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N21",
+   "description": "Labirinto gerado 21×21 (braid 0,08)",
+   "x": 21,
+   "size": 21,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 48,
+   "pathCells": 49,
+   "timeMs": 0.014982308593749938,
+   "timedRuns": 256,
+   "expansions": 186,
+   "operations": {
+    "relaxations": 204,
+    "heapPushes": 205,
+    "heapPops": 190
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 0.014982308593749938,
+     "nodeExpansions": 186
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N51",
+   "description": "Labirinto gerado 51×51 (braid 0,08)",
+   "x": 51,
+   "size": 51,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 150,
+   "pathCells": 151,
+   "timeMs": 0.09645885937499976,
+   "timedRuns": 64,
+   "expansions": 1180,
+   "operations": {
+    "relaxations": 1238,
+    "heapPushes": 1239,
+    "heapPops": 1216
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 0.09645885937499976,
+     "nodeExpansions": 1180
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N101",
+   "description": "Labirinto gerado 101×101 (braid 0,08)",
+   "x": 101,
+   "size": 101,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 280,
+   "pathCells": 281,
+   "timeMs": 0.44739506250000005,
+   "timedRuns": 16,
+   "expansions": 4430,
+   "operations": {
+    "relaxations": 4627,
+    "heapPushes": 4628,
+    "heapPops": 4595
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 280,
+     "pathCells": 281,
+     "timeMs": 0.44739506250000005,
+     "nodeExpansions": 4430
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N201",
+   "description": "Labirinto gerado 201×201 (braid 0,08)",
+   "x": 201,
+   "size": 201,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 538,
+   "pathCells": 539,
+   "timeMs": 2.4141899999999623,
+   "timedRuns": 1,
+   "expansions": 20778,
+   "operations": {
+    "relaxations": 21723,
+    "heapPushes": 21724,
+    "heapPops": 21661
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 538,
+     "pathCells": 539,
+     "timeMs": 2.4141899999999623,
+     "nodeExpansions": 20778
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N401",
+   "description": "Labirinto gerado 401×401 (braid 0,08)",
+   "x": 401,
+   "size": 401,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 1014,
+   "pathCells": 1015,
+   "timeMs": 10.26923099999999,
+   "timedRuns": 1,
+   "expansions": 78286,
+   "operations": {
+    "relaxations": 81738,
+    "heapPushes": 81739,
+    "heapPops": 81488
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 1014,
+     "pathCells": 1015,
+     "timeMs": 10.26923099999999,
+     "nodeExpansions": 78286
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N801",
+   "description": "Labirinto gerado 801×801 (braid 0,08)",
+   "x": 801,
+   "size": 801,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2056,
+   "pathCells": 2057,
+   "timeMs": 51.97551599999997,
+   "timedRuns": 1,
+   "expansions": 308388,
+   "operations": {
+    "relaxations": 321911,
+    "heapPushes": 321912,
+    "heapPops": 321561
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2056,
+     "pathCells": 2057,
+     "timeMs": 51.97551599999997,
+     "nodeExpansions": 308388
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-open",
+   "description": "Grid aberto (sem obstáculos)",
+   "x": 0,
+   "size": 101,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.05452400000000068,
+   "timedRuns": 64,
+   "expansions": 201,
+   "operations": {
+    "relaxations": 398,
+    "heapPushes": 399,
+    "heapPops": 201
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.05452400000000068,
+     "nodeExpansions": 201
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand25",
+   "description": "Obstáculos aleatórios 25%",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.07618654687499671,
+   "timedRuns": 64,
+   "expansions": 520,
+   "operations": {
+    "relaxations": 839,
+    "heapPushes": 840,
+    "heapPops": 520
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.07618654687499671,
+     "nodeExpansions": 520
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand40",
+   "description": "Obstáculos aleatórios 40%",
+   "x": 2,
+   "size": 101,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 288,
+   "pathCells": 289,
+   "timeMs": 0.2552606874999981,
+   "timedRuns": 16,
+   "expansions": 2607,
+   "operations": {
+    "relaxations": 2782,
+    "heapPushes": 2783,
+    "heapPops": 2752
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 0.2552606874999981,
+     "nodeExpansions": 2607
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-perfect",
+   "description": "Labirinto perfeito (braid 0)",
+   "x": 3,
+   "size": 101,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2628,
+   "pathCells": 2629,
+   "timeMs": 0.35152168749999646,
+   "timedRuns": 16,
+   "expansions": 5191,
+   "operations": {
+    "relaxations": 5192,
+    "heapPushes": 5193,
+    "heapPops": 5191
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 0.35152168749999646,
+     "nodeExpansions": 5191
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid08",
+   "description": "Labirinto braid 0,08",
+   "x": 4,
+   "size": 101,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 312,
+   "pathCells": 313,
+   "timeMs": 0.5598775000000273,
+   "timedRuns": 4,
+   "expansions": 5150,
+   "operations": {
+    "relaxations": 5379,
+    "heapPushes": 5380,
+    "heapPops": 5352
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 312,
+     "pathCells": 313,
+     "timeMs": 0.5598775000000273,
+     "nodeExpansions": 5150
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid30",
+   "description": "Labirinto braid 0,30",
+   "x": 5,
+   "size": 101,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.24881543749999935,
+   "timedRuns": 16,
+   "expansions": 2032,
+   "operations": {
+    "relaxations": 2591,
+    "heapPushes": 2592,
+    "heapPops": 2032
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.24881543749999935,
+     "nodeExpansions": 2032
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-utrap",
+   "description": "Armadilha em U (grid aberto)",
+   "x": 6,
+   "size": 101,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 142,
+   "pathCells": 143,
+   "timeMs": 0.4081138125000052,
+   "timedRuns": 16,
+   "expansions": 3583,
+   "operations": {
+    "relaxations": 3761,
+    "heapPushes": 3762,
+    "heapPops": 3583
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 0.4081138125000052,
+     "nodeExpansions": 3583
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d25",
+   "description": "201×201, 25% obstáculos, destino a 25 passos do centro",
+   "x": 25,
+   "size": 201,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 25,
+   "pathCells": 26,
+   "timeMs": 0.020710027343749715,
+   "timedRuns": 256,
+   "expansions": 36,
+   "operations": {
+    "relaxations": 59,
+    "heapPushes": 60,
+    "heapPops": 36
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 25,
+     "pathCells": 26,
+     "timeMs": 0.020710027343749715,
+     "nodeExpansions": 36
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d50",
+   "description": "201×201, 25% obstáculos, destino a 50 passos do centro",
+   "x": 50,
+   "size": 201,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 50,
+   "pathCells": 51,
+   "timeMs": 0.04735320312499969,
+   "timedRuns": 256,
+   "expansions": 113,
+   "operations": {
+    "relaxations": 193,
+    "heapPushes": 194,
+    "heapPops": 118
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 0.04735320312499969,
+     "nodeExpansions": 113
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d100",
+   "description": "201×201, 25% obstáculos, destino a 100 passos do centro",
+   "x": 100,
+   "size": 201,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 0.06480384374999915,
+   "timedRuns": 64,
+   "expansions": 460,
+   "operations": {
+    "relaxations": 625,
+    "heapPushes": 626,
+    "heapPops": 500
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 0.06480384374999915,
+     "nodeExpansions": 460
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d200",
+   "description": "201×201, 25% obstáculos, destino a 200 passos do centro",
+   "x": 200,
+   "size": 201,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.24381999999999948,
+   "timedRuns": 16,
+   "expansions": 1396,
+   "operations": {
+    "relaxations": 2129,
+    "heapPushes": 2130,
+    "heapPops": 1396
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.24381999999999948,
+     "nodeExpansions": 1396
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze41",
+   "description": "Labirinto 41×41 (braid 0,08)",
+   "x": 0,
+   "size": 41,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 102,
+   "pathCells": 103,
+   "timeMs": 0.06829617187500148,
+   "timedRuns": 64,
+   "expansions": 832,
+   "operations": {
+    "relaxations": 880,
+    "heapPushes": 881,
+    "heapPops": 857
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 0.06829617187500148,
+     "nodeExpansions": 832
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 258,
+   "pathCells": 259,
+   "timeMs": 0.6077607500000113,
+   "timedRuns": 4,
+   "expansions": 5412,
+   "operations": {
+    "relaxations": 5676,
+    "heapPushes": 5677,
+    "heapPops": 5656
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 258,
+     "pathCells": 259,
+     "timeMs": 0.6077607500000113,
+     "nodeExpansions": 5412
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-rand25-51",
+   "description": "Grid 51×51 com 25% de obstáculos",
+   "x": 2,
+   "size": 51,
+   "algorithmId": "astar",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 0.030369624999999623,
+   "timedRuns": 256,
+   "expansions": 197,
+   "operations": {
+    "relaxations": 316,
+    "heapPushes": 317,
+    "heapPops": 197
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 0.030369624999999623,
+     "nodeExpansions": 197
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N21",
+   "description": "Labirinto gerado 21×21 (braid 0,08)",
+   "x": 21,
+   "size": 21,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 50,
+   "pathCells": 51,
+   "timeMs": 0.011133265625000055,
+   "timedRuns": 256,
+   "expansions": 70,
+   "operations": {
+    "heapPushes": 83,
+    "heapPops": 70
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 0.011133265625000055,
+     "nodeExpansions": 70
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N51",
+   "description": "Labirinto gerado 51×51 (braid 0,08)",
+   "x": 51,
+   "size": 51,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 178,
+   "pathCells": 179,
+   "timeMs": 0.02306583984374999,
+   "timedRuns": 256,
+   "expansions": 262,
+   "operations": {
+    "heapPushes": 288,
+    "heapPops": 262
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 178,
+     "pathCells": 179,
+     "timeMs": 0.02306583984374999,
+     "nodeExpansions": 262
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N101",
+   "description": "Labirinto gerado 101×101 (braid 0,08)",
+   "x": 101,
+   "size": 101,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 350,
+   "pathCells": 351,
+   "timeMs": 0.05732679687500042,
+   "timedRuns": 64,
+   "expansions": 653,
+   "operations": {
+    "heapPushes": 722,
+    "heapPops": 653
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 350,
+     "pathCells": 351,
+     "timeMs": 0.05732679687500042,
+     "nodeExpansions": 653
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N201",
+   "description": "Labirinto gerado 201×201 (braid 0,08)",
+   "x": 201,
+   "size": 201,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 686,
+   "pathCells": 687,
+   "timeMs": 0.1530187500000011,
+   "timedRuns": 16,
+   "expansions": 983,
+   "operations": {
+    "heapPushes": 1126,
+    "heapPops": 983
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 686,
+     "pathCells": 687,
+     "timeMs": 0.1530187500000011,
+     "nodeExpansions": 983
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N401",
+   "description": "Labirinto gerado 401×401 (braid 0,08)",
+   "x": 401,
+   "size": 401,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 1338,
+   "pathCells": 1339,
+   "timeMs": 0.21433731249999965,
+   "timedRuns": 16,
+   "expansions": 1892,
+   "operations": {
+    "heapPushes": 2173,
+    "heapPops": 1892
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 1338,
+     "pathCells": 1339,
+     "timeMs": 0.21433731249999965,
+     "nodeExpansions": 1892
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N801",
+   "description": "Labirinto gerado 801×801 (braid 0,08)",
+   "x": 801,
+   "size": 801,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2816,
+   "pathCells": 2817,
+   "timeMs": 0.5357040000000097,
+   "timedRuns": 4,
+   "expansions": 3809,
+   "operations": {
+    "heapPushes": 4361,
+    "heapPops": 3809
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2816,
+     "pathCells": 2817,
+     "timeMs": 0.5357040000000097,
+     "nodeExpansions": 3809
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-open",
+   "description": "Grid aberto (sem obstáculos)",
+   "x": 0,
+   "size": 101,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 0.04771157812499993,
+   "timedRuns": 64,
+   "expansions": 201,
+   "operations": {
+    "heapPushes": 399,
+    "heapPops": 201
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 0.04771157812499993,
+     "nodeExpansions": 201
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand25",
+   "description": "Obstáculos aleatórios 25%",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 228,
+   "pathCells": 229,
+   "timeMs": 0.039187195312500034,
+   "timedRuns": 256,
+   "expansions": 280,
+   "operations": {
+    "heapPushes": 471,
+    "heapPops": 280
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 228,
+     "pathCells": 229,
+     "timeMs": 0.039187195312500034,
+     "nodeExpansions": 280
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand40",
+   "description": "Obstáculos aleatórios 40%",
+   "x": 2,
+   "size": 101,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 328,
+   "pathCells": 329,
+   "timeMs": 0.0566272968749999,
+   "timedRuns": 64,
+   "expansions": 600,
+   "operations": {
+    "heapPushes": 767,
+    "heapPops": 600
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 328,
+     "pathCells": 329,
+     "timeMs": 0.0566272968749999,
+     "nodeExpansions": 600
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-perfect",
+   "description": "Labirinto perfeito (braid 0)",
+   "x": 3,
+   "size": 101,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2628,
+   "pathCells": 2629,
+   "timeMs": 0.25511225000000337,
+   "timedRuns": 16,
+   "expansions": 4273,
+   "operations": {
+    "heapPushes": 4298,
+    "heapPops": 4273
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 0.25511225000000337,
+     "nodeExpansions": 4273
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid08",
+   "description": "Labirinto braid 0,08",
+   "x": 4,
+   "size": 101,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 432,
+   "pathCells": 433,
+   "timeMs": 0.11972470312499972,
+   "timedRuns": 64,
+   "expansions": 1678,
+   "operations": {
+    "heapPushes": 1753,
+    "heapPops": 1678
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 432,
+     "pathCells": 433,
+     "timeMs": 0.11972470312499972,
+     "nodeExpansions": 1678
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid30",
+   "description": "Labirinto braid 0,30",
+   "x": 5,
+   "size": 101,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 218,
+   "pathCells": 219,
+   "timeMs": 0.025376207031249987,
+   "timedRuns": 256,
+   "expansions": 244,
+   "operations": {
+    "heapPushes": 347,
+    "heapPops": 244
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 218,
+     "pathCells": 219,
+     "timeMs": 0.025376207031249987,
+     "nodeExpansions": 244
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-utrap",
+   "description": "Armadilha em U (grid aberto)",
+   "x": 6,
+   "size": 101,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 202,
+   "pathCells": 203,
+   "timeMs": 0.22358768750000024,
+   "timedRuns": 16,
+   "expansions": 2823,
+   "operations": {
+    "heapPushes": 3003,
+    "heapPops": 2823
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 202,
+     "pathCells": 203,
+     "timeMs": 0.22358768750000024,
+     "nodeExpansions": 2823
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d25",
+   "description": "201×201, 25% obstáculos, destino a 25 passos do centro",
+   "x": 25,
+   "size": 201,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 25,
+   "pathCells": 26,
+   "timeMs": 0.008740726562499912,
+   "timedRuns": 256,
+   "expansions": 28,
+   "operations": {
+    "heapPushes": 56,
+    "heapPops": 28
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 25,
+     "pathCells": 26,
+     "timeMs": 0.008740726562499912,
+     "nodeExpansions": 28
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d50",
+   "description": "201×201, 25% obstáculos, destino a 50 passos do centro",
+   "x": 50,
+   "size": 201,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 56,
+   "pathCells": 57,
+   "timeMs": 0.012766531250000046,
+   "timedRuns": 256,
+   "expansions": 71,
+   "operations": {
+    "heapPushes": 136,
+    "heapPops": 71
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 56,
+     "pathCells": 57,
+     "timeMs": 0.012766531250000046,
+     "nodeExpansions": 71
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d100",
+   "description": "201×201, 25% obstáculos, destino a 100 passos do centro",
+   "x": 100,
+   "size": 201,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 102,
+   "pathCells": 103,
+   "timeMs": 0.020923828125000377,
+   "timedRuns": 256,
+   "expansions": 115,
+   "operations": {
+    "heapPushes": 235,
+    "heapPops": 115
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 0.020923828125000377,
+     "nodeExpansions": 115
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M3",
+   "scenario": "M3-d200",
+   "description": "201×201, 25% obstáculos, destino a 200 passos do centro",
+   "x": 200,
+   "size": 201,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 244,
+   "pathCells": 245,
+   "timeMs": 0.03719204687499911,
+   "timedRuns": 64,
+   "expansions": 388,
+   "operations": {
+    "heapPushes": 606,
+    "heapPops": 388
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 244,
+     "pathCells": 245,
+     "timeMs": 0.03719204687499911,
+     "nodeExpansions": 388
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze41",
+   "description": "Labirinto 41×41 (braid 0,08)",
+   "x": 0,
+   "size": 41,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 108,
+   "pathCells": 109,
+   "timeMs": 0.034911562499999604,
+   "timedRuns": 64,
+   "expansions": 168,
+   "operations": {
+    "heapPushes": 200,
+    "heapPops": 168
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 108,
+     "pathCells": 109,
+     "timeMs": 0.034911562499999604,
+     "nodeExpansions": 168
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 290,
+   "pathCells": 291,
+   "timeMs": 0.032108296875000164,
+   "timedRuns": 64,
+   "expansions": 485,
+   "operations": {
+    "heapPushes": 553,
+    "heapPops": 485
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 290,
+     "pathCells": 291,
+     "timeMs": 0.032108296875000164,
+     "nodeExpansions": 485
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-rand25-51",
+   "description": "Grid 51×51 com 25% de obstáculos",
+   "x": 2,
+   "size": 51,
+   "algorithmId": "greedy",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 108,
+   "pathCells": 109,
+   "timeMs": 0.015728898437499694,
+   "timedRuns": 256,
+   "expansions": 122,
+   "operations": {
+    "heapPushes": 211,
+    "heapPops": 122
+   },
+   "params": {},
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 108,
+     "pathCells": 109,
+     "timeMs": 0.015728898437499694,
+     "nodeExpansions": 122
+    }
+   ],
+   "aggregate": null
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N21",
+   "description": "Labirinto gerado 21×21 (braid 0,08)",
+   "x": 21,
+   "size": 21,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 48,
+   "pathCells": 49,
+   "timeMs": 2.537125000000009,
+   "timedRuns": 1,
+   "expansions": 43100,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 1682,
+    "pheromoneDeposits": 42168
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 2.4502880000000005,
+     "nodeExpansions": 41814
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 2.5101119999999923,
+     "nodeExpansions": 43940
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 2.5014560000000188,
+     "nodeExpansions": 42936
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 2.6537139999999795,
+     "nodeExpansions": 43053
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 2.5996509999999944,
+     "nodeExpansions": 44293
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 2.480997000000002,
+     "nodeExpansions": 43151
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 2.501365000000021,
+     "nodeExpansions": 43209
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 2.643835000000024,
+     "nodeExpansions": 42397
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 2.4660780000000386,
+     "nodeExpansions": 43100
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 2.563754000000017,
+     "nodeExpansions": 45024
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 2.537125000000009,
+     "std": 0.0734983551063048,
+     "best": 2.4502880000000005,
+     "worst": 2.6537139999999795
+    },
+    "cost": {
+     "mean": 49,
+     "std": 1.0540925533894598,
+     "best": 48,
+     "worst": 50
+    },
+    "expansions": {
+     "mean": 43291.7,
+     "std": 922.2393097479876,
+     "best": 41814,
+     "worst": 45024
+    }
+   }
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N51",
+   "description": "Labirinto gerado 51×51 (braid 0,08)",
+   "x": 51,
+   "size": 51,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 150,
+   "pathCells": 151,
+   "timeMs": 8.569385299999999,
+   "timedRuns": 1,
+   "expansions": 137043,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 17177,
+    "pheromoneDeposits": 123990
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 8.597476000000029,
+     "nodeExpansions": 144496
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 8.277050000000031,
+     "nodeExpansions": 138557
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 8.42184599999996,
+     "nodeExpansions": 136883
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 8.544606000000044,
+     "nodeExpansions": 140623
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 8.947953999999982,
+     "nodeExpansions": 139767
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 8.582562999999936,
+     "nodeExpansions": 142047
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 154,
+     "pathCells": 155,
+     "timeMs": 8.809317000000078,
+     "nodeExpansions": 144501
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 8.76837999999998,
+     "nodeExpansions": 146435
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 8.475194999999985,
+     "nodeExpansions": 138794
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 8.269465999999966,
+     "nodeExpansions": 137043
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 8.569385299999999,
+     "std": 0.22313630528399503,
+     "best": 8.269465999999966,
+     "worst": 8.947953999999982
+    },
+    "cost": {
+     "mean": 150.4,
+     "std": 1.2649110640673515,
+     "best": 150,
+     "worst": 154
+    },
+    "expansions": {
+     "mean": 140914.6,
+     "std": 3335.768450530635,
+     "best": 136883,
+     "worst": 146435
+    }
+   }
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N101",
+   "description": "Labirinto gerado 101×101 (braid 0,08)",
+   "x": 101,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 286,
+   "pathCells": 287,
+   "timeMs": 22.779223699999978,
+   "timedRuns": 1,
+   "expansions": 377179,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 80173,
+    "pheromoneDeposits": 300976
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 302,
+     "pathCells": 303,
+     "timeMs": 24.51736500000004,
+     "nodeExpansions": 388382
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 294,
+     "pathCells": 295,
+     "timeMs": 21.387788,
+     "nodeExpansions": 340188
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 294,
+     "pathCells": 295,
+     "timeMs": 22.730702000000065,
+     "nodeExpansions": 360925
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 296,
+     "pathCells": 297,
+     "timeMs": 20.92394200000001,
+     "nodeExpansions": 334592
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 300,
+     "pathCells": 301,
+     "timeMs": 22.335181999999918,
+     "nodeExpansions": 359325
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 296,
+     "pathCells": 297,
+     "timeMs": 23.704295999999886,
+     "nodeExpansions": 376642
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 294,
+     "pathCells": 295,
+     "timeMs": 22.241375999999946,
+     "nodeExpansions": 358830
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 286,
+     "pathCells": 287,
+     "timeMs": 23.77215299999989,
+     "nodeExpansions": 377179
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 298,
+     "pathCells": 299,
+     "timeMs": 23.61499600000002,
+     "nodeExpansions": 374420
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 296,
+     "pathCells": 297,
+     "timeMs": 22.564436999999998,
+     "nodeExpansions": 364546
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 22.779223699999978,
+     "std": 1.1291305517683323,
+     "best": 20.92394200000001,
+     "worst": 24.51736500000004
+    },
+    "cost": {
+     "mean": 295.6,
+     "std": 4.2998707990925595,
+     "best": 286,
+     "worst": 302
+    },
+    "expansions": {
+     "mean": 363502.9,
+     "std": 16747.382942816268,
+     "best": 334592,
+     "worst": 388382
+    }
+   }
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N201",
+   "description": "Labirinto gerado 201×201 (braid 0,08)",
+   "x": 201,
+   "size": 201,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 678,
+   "pathCells": 679,
+   "timeMs": 89.04935559999998,
+   "timedRuns": 1,
+   "expansions": 1433621,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 541357,
+    "pheromoneDeposits": 885016
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 678,
+     "pathCells": 679,
+     "timeMs": 88.97851199999991,
+     "nodeExpansions": 1433621
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 734,
+     "pathCells": 735,
+     "timeMs": 82.259051,
+     "nodeExpansions": 1319347
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 806,
+     "pathCells": 807,
+     "timeMs": 92.1253529999999,
+     "nodeExpansions": 1466817
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 812,
+     "pathCells": 813,
+     "timeMs": 93.2229319999999,
+     "nodeExpansions": 1451953
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 722,
+     "pathCells": 723,
+     "timeMs": 86.26263500000005,
+     "nodeExpansions": 1368890
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 744,
+     "pathCells": 745,
+     "timeMs": 84.62491399999999,
+     "nodeExpansions": 1340512
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 728,
+     "pathCells": 729,
+     "timeMs": 90.73019299999987,
+     "nodeExpansions": 1474321
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 764,
+     "pathCells": 765,
+     "timeMs": 99.26468000000023,
+     "nodeExpansions": 1620585
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 802,
+     "pathCells": 803,
+     "timeMs": 90.25758700000006,
+     "nodeExpansions": 1438923
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 788,
+     "pathCells": 789,
+     "timeMs": 82.767699,
+     "nodeExpansions": 1304220
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 89.04935559999998,
+     "std": 5.253912301438987,
+     "best": 82.259051,
+     "worst": 99.26468000000023
+    },
+    "cost": {
+     "mean": 757.8,
+     "std": 44.04492655863505,
+     "best": 678,
+     "worst": 812
+    },
+    "expansions": {
+     "mean": 1421918.9,
+     "std": 93909.73077902466,
+     "best": 1304220,
+     "worst": 1620585
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-open",
+   "description": "Grid aberto (sem obstáculos)",
+   "x": 0,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 23.20066939999997,
+   "timedRuns": 1,
+   "expansions": 351539,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 111327,
+    "pheromoneDeposits": 160702
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 202,
+     "pathCells": 203,
+     "timeMs": 22.97047500000008,
+     "nodeExpansions": 345395
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 204,
+     "pathCells": 205,
+     "timeMs": 23.568197000000055,
+     "nodeExpansions": 366732
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 204,
+     "pathCells": 205,
+     "timeMs": 23.163576999999805,
+     "nodeExpansions": 354536
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 23.004029000000173,
+     "nodeExpansions": 352895
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 22.762652999999773,
+     "nodeExpansions": 351539
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 202,
+     "pathCells": 203,
+     "timeMs": 22.458075999999892,
+     "nodeExpansions": 342398
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 202,
+     "pathCells": 203,
+     "timeMs": 22.863942999999836,
+     "nodeExpansions": 345028
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 204,
+     "pathCells": 205,
+     "timeMs": 23.85804700000017,
+     "nodeExpansions": 369259
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 202,
+     "pathCells": 203,
+     "timeMs": 23.38699399999996,
+     "nodeExpansions": 355588
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 204,
+     "pathCells": 205,
+     "timeMs": 23.970702999999958,
+     "nodeExpansions": 369770
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 23.20066939999997,
+     "std": 0.4881497032592635,
+     "best": 22.458075999999892,
+     "worst": 23.970702999999958
+    },
+    "cost": {
+     "mean": 202.4,
+     "std": 1.5776212754932308,
+     "best": 200,
+     "worst": 204
+    },
+    "expansions": {
+     "mean": 355314,
+     "std": 10141.244959734151,
+     "best": 342398,
+     "worst": 369770
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand25",
+   "description": "Obstáculos aleatórios 25%",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 206,
+   "pathCells": 207,
+   "timeMs": 24.837193399999933,
+   "timedRuns": 1,
+   "expansions": 330052,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 101406,
+    "pheromoneDeposits": 189760
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 212,
+     "pathCells": 213,
+     "timeMs": 24.618685999999798,
+     "nodeExpansions": 342795
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 208,
+     "pathCells": 209,
+     "timeMs": 24.65588600000001,
+     "nodeExpansions": 336334
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 212,
+     "pathCells": 213,
+     "timeMs": 24.90754300000026,
+     "nodeExpansions": 346346
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 216,
+     "pathCells": 217,
+     "timeMs": 26.40957299999991,
+     "nodeExpansions": 368088
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 212,
+     "pathCells": 213,
+     "timeMs": 25.036687999999685,
+     "nodeExpansions": 349401
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 206,
+     "pathCells": 207,
+     "timeMs": 23.912469999999757,
+     "nodeExpansions": 330052
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 218,
+     "pathCells": 219,
+     "timeMs": 24.692305000000033,
+     "nodeExpansions": 338798
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 206,
+     "pathCells": 207,
+     "timeMs": 24.195404999999937,
+     "nodeExpansions": 335006
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 214,
+     "pathCells": 215,
+     "timeMs": 23.933910000000196,
+     "nodeExpansions": 324026
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 218,
+     "pathCells": 219,
+     "timeMs": 26.009467999999742,
+     "nodeExpansions": 367204
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 24.837193399999933,
+     "std": 0.8216439908400226,
+     "best": 23.912469999999757,
+     "worst": 26.40957299999991
+    },
+    "cost": {
+     "mean": 212.2,
+     "std": 4.4671641514002545,
+     "best": 206,
+     "worst": 218
+    },
+    "expansions": {
+     "mean": 343805,
+     "std": 14585.500517066028,
+     "best": 324026,
+     "worst": 368088
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand40",
+   "description": "Obstáculos aleatórios 40%",
+   "x": 2,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 296,
+   "pathCells": 297,
+   "timeMs": 20.092754700000068,
+   "timedRuns": 1,
+   "expansions": 283379,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 59225,
+    "pheromoneDeposits": 228678
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 296,
+     "pathCells": 297,
+     "timeMs": 20.03432699999985,
+     "nodeExpansions": 283379
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 306,
+     "pathCells": 307,
+     "timeMs": 20.235055999999986,
+     "nodeExpansions": 282757
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 308,
+     "pathCells": 309,
+     "timeMs": 20.224347000000307,
+     "nodeExpansions": 285672
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 304,
+     "pathCells": 305,
+     "timeMs": 20.406282000000374,
+     "nodeExpansions": 286992
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 306,
+     "pathCells": 307,
+     "timeMs": 20.351976999999806,
+     "nodeExpansions": 285732
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 306,
+     "pathCells": 307,
+     "timeMs": 19.66140099999984,
+     "nodeExpansions": 275058
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 306,
+     "pathCells": 307,
+     "timeMs": 19.720794000000296,
+     "nodeExpansions": 273957
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 302,
+     "pathCells": 303,
+     "timeMs": 20.08734800000002,
+     "nodeExpansions": 283102
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 298,
+     "pathCells": 299,
+     "timeMs": 19.938015000000178,
+     "nodeExpansions": 279489
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 304,
+     "pathCells": 305,
+     "timeMs": 20.26800000000003,
+     "nodeExpansions": 281259
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 20.092754700000068,
+     "std": 0.2550775170571138,
+     "best": 19.66140099999984,
+     "worst": 20.406282000000374
+    },
+    "cost": {
+     "mean": 303.6,
+     "std": 3.864367132317183,
+     "best": 296,
+     "worst": 308
+    },
+    "expansions": {
+     "mean": 281739.7,
+     "std": 4410.573408173691,
+     "best": 273957,
+     "worst": 286992
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-perfect",
+   "description": "Labirinto perfeito (braid 0)",
+   "x": 3,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2628,
+   "pathCells": 2629,
+   "timeMs": 94.41250679999993,
+   "timedRuns": 1,
+   "expansions": 1666874,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 90074,
+    "pheromoneDeposits": 1655640
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 94.61340599999994,
+     "nodeExpansions": 1663376
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 94.24228999999968,
+     "nodeExpansions": 1662662
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 93.90377099999978,
+     "nodeExpansions": 1666874
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 94.16655899999978,
+     "nodeExpansions": 1666980
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 94.38997000000018,
+     "nodeExpansions": 1668772
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 95.15240499999982,
+     "nodeExpansions": 1663746
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 94.82484600000043,
+     "nodeExpansions": 1667932
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 94.359872,
+     "nodeExpansions": 1664942
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 94.00088400000004,
+     "nodeExpansions": 1663082
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 94.47106499999973,
+     "nodeExpansions": 1661186
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 94.41250679999993,
+     "std": 0.3774549812894587,
+     "best": 93.90377099999978,
+     "worst": 95.15240499999982
+    },
+    "cost": {
+     "mean": 2628,
+     "std": 0,
+     "best": 2628,
+     "worst": 2628
+    },
+    "expansions": {
+     "mean": 1664955.2,
+     "std": 2541.688712472696,
+     "best": 1661186,
+     "worst": 1668772
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid08",
+   "description": "Labirinto braid 0,08",
+   "x": 4,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 328,
+   "pathCells": 329,
+   "timeMs": 27.60264309999993,
+   "timedRuns": 1,
+   "expansions": 462996,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 121584,
+    "pheromoneDeposits": 348822
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 364,
+     "pathCells": 365,
+     "timeMs": 27.792865999999776,
+     "nodeExpansions": 448941
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 356,
+     "pathCells": 357,
+     "timeMs": 26.163300000000163,
+     "nodeExpansions": 416923
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 352,
+     "pathCells": 353,
+     "timeMs": 27.525076999999328,
+     "nodeExpansions": 442295
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 340,
+     "pathCells": 341,
+     "timeMs": 28.272353999999723,
+     "nodeExpansions": 453320
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 328,
+     "pathCells": 329,
+     "timeMs": 28.293752999999924,
+     "nodeExpansions": 462996
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 338,
+     "pathCells": 339,
+     "timeMs": 28.251454000000194,
+     "nodeExpansions": 442843
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 334,
+     "pathCells": 335,
+     "timeMs": 27.7272210000001,
+     "nodeExpansions": 436532
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 358,
+     "pathCells": 359,
+     "timeMs": 27.68269500000042,
+     "nodeExpansions": 442853
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 336,
+     "pathCells": 337,
+     "timeMs": 25.949385999999322,
+     "nodeExpansions": 419546
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 332,
+     "pathCells": 333,
+     "timeMs": 28.368325000000368,
+     "nodeExpansions": 462010
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 27.60264309999993,
+     "std": 0.8693846322440516,
+     "best": 25.949385999999322,
+     "worst": 28.368325000000368
+    },
+    "cost": {
+     "mean": 343.8,
+     "std": 12.559193180030846,
+     "best": 328,
+     "worst": 364
+    },
+    "expansions": {
+     "mean": 442825.9,
+     "std": 15546.322326446785,
+     "best": 416923,
+     "worst": 462996
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid30",
+   "description": "Labirinto braid 0,30",
+   "x": 5,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 216,
+   "pathCells": 217,
+   "timeMs": 23.725717700000132,
+   "timedRuns": 1,
+   "expansions": 322621,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 78859,
+    "pheromoneDeposits": 228638
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 226,
+     "pathCells": 227,
+     "timeMs": 24.476596999999856,
+     "nodeExpansions": 348676
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 230,
+     "pathCells": 231,
+     "timeMs": 24.399751999999353,
+     "nodeExpansions": 356511
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 216,
+     "pathCells": 217,
+     "timeMs": 22.82096200000069,
+     "nodeExpansions": 322621
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 222,
+     "pathCells": 223,
+     "timeMs": 25.36770499999966,
+     "nodeExpansions": 362060
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 232,
+     "pathCells": 233,
+     "timeMs": 23.61847300000045,
+     "nodeExpansions": 343213
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 232,
+     "pathCells": 233,
+     "timeMs": 24.41357700000026,
+     "nodeExpansions": 355781
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 226,
+     "pathCells": 227,
+     "timeMs": 23.380843000000823,
+     "nodeExpansions": 339094
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 220,
+     "pathCells": 221,
+     "timeMs": 22.61888100000033,
+     "nodeExpansions": 320209
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 220,
+     "pathCells": 221,
+     "timeMs": 22.746962000000167,
+     "nodeExpansions": 332060
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 224,
+     "pathCells": 225,
+     "timeMs": 23.413424999999734,
+     "nodeExpansions": 331789
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 23.725717700000132,
+     "std": 0.9078065422263984,
+     "best": 22.61888100000033,
+     "worst": 25.36770499999966
+    },
+    "cost": {
+     "mean": 224.8,
+     "std": 5.43241300999023,
+     "best": 216,
+     "worst": 232
+    },
+    "expansions": {
+     "mean": 341201.4,
+     "std": 14546.69754961586,
+     "best": 320209,
+     "worst": 362060
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-utrap",
+   "description": "Armadilha em U (grid aberto)",
+   "x": 6,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 142,
+   "pathCells": 143,
+   "timeMs": 23.901611700000103,
+   "timedRuns": 1,
+   "expansions": 380970,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 100046,
+    "pheromoneDeposits": 143050
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 148,
+     "pathCells": 149,
+     "timeMs": 23.5847389999999,
+     "nodeExpansions": 370801
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 24.189062000000376,
+     "nodeExpansions": 380970
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 148,
+     "pathCells": 149,
+     "timeMs": 23.745523999999932,
+     "nodeExpansions": 368833
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 146,
+     "pathCells": 147,
+     "timeMs": 24.16164099999969,
+     "nodeExpansions": 384450
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 144,
+     "pathCells": 145,
+     "timeMs": 24.396915999999692,
+     "nodeExpansions": 385090
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 146,
+     "pathCells": 147,
+     "timeMs": 22.210197000000335,
+     "nodeExpansions": 348527
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 144,
+     "pathCells": 145,
+     "timeMs": 26.232841999999437,
+     "nodeExpansions": 378590
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 148,
+     "pathCells": 149,
+     "timeMs": 24.510310000000572,
+     "nodeExpansions": 387817
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 146,
+     "pathCells": 147,
+     "timeMs": 23.141530000000785,
+     "nodeExpansions": 361856
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 144,
+     "pathCells": 145,
+     "timeMs": 22.843356000000313,
+     "nodeExpansions": 349878
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 23.901611700000103,
+     "std": 1.099697042937686,
+     "best": 22.210197000000335,
+     "worst": 26.232841999999437
+    },
+    "cost": {
+     "mean": 145.6,
+     "std": 2.065591117977289,
+     "best": 142,
+     "worst": 148
+    },
+    "expansions": {
+     "mean": 371681.2,
+     "std": 14353.217191045822,
+     "best": 348527,
+     "worst": 387817
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze41",
+   "description": "Labirinto 41×41 (braid 0,08)",
+   "x": 0,
+   "size": 41,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 102,
+   "pathCells": 103,
+   "timeMs": 6.316622099999949,
+   "timedRuns": 1,
+   "expansions": 93886,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 10544,
+    "pheromoneDeposits": 85912
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 6.57421499999964,
+     "nodeExpansions": 97675
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 6.251463999999942,
+     "nodeExpansions": 97029
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 6.678233000000546,
+     "nodeExpansions": 103587
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 6.223431999999775,
+     "nodeExpansions": 96806
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 6.2675449999997,
+     "nodeExpansions": 96018
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 5.845025999999962,
+     "nodeExpansions": 93886
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 6.239421999999649,
+     "nodeExpansions": 97831
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 6.295879000000241,
+     "nodeExpansions": 99301
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 6.393322999999327,
+     "nodeExpansions": 103646
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 6.397682000000714,
+     "nodeExpansions": 100834
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 6.316622099999949,
+     "std": 0.22452464062480515,
+     "best": 5.845025999999962,
+     "worst": 6.678233000000546
+    },
+    "cost": {
+     "mean": 102,
+     "std": 0,
+     "best": 102,
+     "worst": 102
+    },
+    "expansions": {
+     "mean": 98661.3,
+     "std": 3193.7238470336024,
+     "best": 93886,
+     "worst": 103646
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 282,
+   "pathCells": 283,
+   "timeMs": 25.085800600000038,
+   "timedRuns": 1,
+   "expansions": 412880,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 124898,
+    "pheromoneDeposits": 294456
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 316,
+     "pathCells": 317,
+     "timeMs": 26.223173000000315,
+     "nodeExpansions": 416348
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 318,
+     "pathCells": 319,
+     "timeMs": 23.84066299999995,
+     "nodeExpansions": 384684
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 320,
+     "pathCells": 321,
+     "timeMs": 25.12792999999965,
+     "nodeExpansions": 396460
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 298,
+     "pathCells": 299,
+     "timeMs": 24.80360500000006,
+     "nodeExpansions": 395944
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 310,
+     "pathCells": 311,
+     "timeMs": 25.714410999999927,
+     "nodeExpansions": 417175
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 298,
+     "pathCells": 299,
+     "timeMs": 23.885658999999578,
+     "nodeExpansions": 378680
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 308,
+     "pathCells": 309,
+     "timeMs": 25.40839000000051,
+     "nodeExpansions": 408556
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 282,
+     "pathCells": 283,
+     "timeMs": 25.240663999999924,
+     "nodeExpansions": 412880
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 304,
+     "pathCells": 305,
+     "timeMs": 24.67571500000031,
+     "nodeExpansions": 391538
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 314,
+     "pathCells": 315,
+     "timeMs": 25.937796000000162,
+     "nodeExpansions": 419072
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 25.085800600000038,
+     "std": 0.8015954030598692,
+     "best": 23.84066299999995,
+     "worst": 26.223173000000315
+    },
+    "cost": {
+     "mean": 306.8,
+     "std": 11.669523459755236,
+     "best": 282,
+     "worst": 320
+    },
+    "expansions": {
+     "mean": 402133.7,
+     "std": 14565.034722085476,
+     "best": 378680,
+     "worst": 419072
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "iterações = 100",
+   "status": "found",
+   "pathCost": 274,
+   "pathCells": 275,
+   "timeMs": 61.77844929999992,
+   "timedRuns": 1,
+   "expansions": 959968,
+   "operations": {
+    "iterationsRun": 100,
+    "antsLaunched": 2000,
+    "antsArrived": 2000,
+    "backtracks": 134032,
+    "pheromoneDeposits": 851674
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 100,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 316,
+     "pathCells": 317,
+     "timeMs": 64.84371399999964,
+     "nodeExpansions": 1017259
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 296,
+     "pathCells": 297,
+     "timeMs": 60.4959659999995,
+     "nodeExpansions": 933161
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 314,
+     "pathCells": 315,
+     "timeMs": 64.86537700000008,
+     "nodeExpansions": 935018
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 280,
+     "pathCells": 281,
+     "timeMs": 59.486384999999245,
+     "nodeExpansions": 904010
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 296,
+     "pathCells": 297,
+     "timeMs": 60.90738499999952,
+     "nodeExpansions": 946916
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 278,
+     "pathCells": 279,
+     "timeMs": 58.97961600000053,
+     "nodeExpansions": 926974
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 284,
+     "pathCells": 285,
+     "timeMs": 62.86652700000013,
+     "nodeExpansions": 974701
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 274,
+     "pathCells": 275,
+     "timeMs": 61.29482800000005,
+     "nodeExpansions": 959968
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 300,
+     "pathCells": 301,
+     "timeMs": 60.74180100000012,
+     "nodeExpansions": 932943
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 302,
+     "pathCells": 303,
+     "timeMs": 63.30289400000038,
+     "nodeExpansions": 994210
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 61.77844929999992,
+     "std": 2.0878454422477972,
+     "best": 58.97961600000053,
+     "worst": 64.86537700000008
+    },
+    "cost": {
+     "mean": 294,
+     "std": 14.696938456699069,
+     "best": 274,
+     "worst": 316
+    },
+    "expansions": {
+     "mean": 952516,
+     "std": 34283.51786046597,
+     "best": 904010,
+     "worst": 1017259
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "aco",
+   "variant": "formigas = 60",
+   "status": "found",
+   "pathCost": 284,
+   "pathCells": 285,
+   "timeMs": 72.59502759999995,
+   "timedRuns": 1,
+   "expansions": 1113973,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 1800,
+    "antsArrived": 1800,
+    "backtracks": 216849,
+    "pheromoneDeposits": 899634
+   },
+   "params": {
+    "ants": 60,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 284,
+     "pathCells": 285,
+     "timeMs": 72.85997800000041,
+     "nodeExpansions": 1113973
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 286,
+     "pathCells": 287,
+     "timeMs": 67.09342600000036,
+     "nodeExpansions": 1102594
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 306,
+     "pathCells": 307,
+     "timeMs": 73.13337899999988,
+     "nodeExpansions": 1199475
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 306,
+     "pathCells": 307,
+     "timeMs": 71.97719299999972,
+     "nodeExpansions": 1161876
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 310,
+     "pathCells": 311,
+     "timeMs": 71.90924299999915,
+     "nodeExpansions": 1159497
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 296,
+     "pathCells": 297,
+     "timeMs": 68.37587399999938,
+     "nodeExpansions": 1120184
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 302,
+     "pathCells": 303,
+     "timeMs": 69.54394500000035,
+     "nodeExpansions": 1160279
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 300,
+     "pathCells": 301,
+     "timeMs": 71.27374899999995,
+     "nodeExpansions": 1195598
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 306,
+     "pathCells": 307,
+     "timeMs": 74.00944900000013,
+     "nodeExpansions": 1182972
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 85.77404000000024,
+     "nodeExpansions": 1188174
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 72.59502759999995,
+     "std": 5.121010709999778,
+     "best": 67.09342600000036,
+     "worst": 85.77404000000024
+    },
+    "cost": {
+     "mean": 298.4,
+     "std": 9.418657606639659,
+     "best": 284,
+     "worst": 310
+    },
+    "expansions": {
+     "mean": 1158462.2,
+     "std": 35160.63083683859,
+     "best": 1102594,
+     "worst": 1199475
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-rand25-51",
+   "description": "Grid 51×51 com 25% de obstáculos",
+   "x": 2,
+   "size": 51,
+   "algorithmId": "aco",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 7.751353399999789,
+   "timedRuns": 1,
+   "expansions": 100096,
+   "operations": {
+    "iterationsRun": 30,
+    "antsLaunched": 600,
+    "antsArrived": 600,
+    "backtracks": 15134,
+    "pheromoneDeposits": 80232
+   },
+   "params": {
+    "ants": 20,
+    "iterations": 30,
+    "evaporation": 0.3,
+    "alpha": 1,
+    "beta": 3,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 7.650091999999859,
+     "nodeExpansions": 102982
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 104,
+     "pathCells": 105,
+     "timeMs": 7.926056000000244,
+     "nodeExpansions": 107494
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 7.582033999999112,
+     "nodeExpansions": 100096
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 7.525748000000021,
+     "nodeExpansions": 101798
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 104,
+     "pathCells": 105,
+     "timeMs": 7.3089469999995345,
+     "nodeExpansions": 100285
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 7.682944000000134,
+     "nodeExpansions": 101156
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 104,
+     "pathCells": 105,
+     "timeMs": 7.890818999998373,
+     "nodeExpansions": 106092
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 8.079626000000644,
+     "nodeExpansions": 106609
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 7.749620999999024,
+     "nodeExpansions": 102886
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 8.117647000000943,
+     "nodeExpansions": 106214
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 7.751353399999789,
+     "std": 0.2543253712554194,
+     "best": 7.3089469999995345,
+     "worst": 8.117647000000943
+    },
+    "cost": {
+     "mean": 101.8,
+     "std": 1.7511900715418263,
+     "best": 100,
+     "worst": 104
+    },
+    "expansions": {
+     "mean": 103561.2,
+     "std": 2801.281920835531,
+     "best": 100096,
+     "worst": 107494
+    }
+   }
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N21",
+   "description": "Labirinto gerado 21×21 (braid 0,08)",
+   "x": 21,
+   "size": 21,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 48,
+   "pathCells": 49,
+   "timeMs": 3.351048000000003,
+   "timedRuns": 1,
+   "expansions": 29427,
+   "operations": {
+    "generationsRun": 31,
+    "fitnessEvaluations": 846,
+    "crossovers": 692,
+    "mutations": 251,
+    "immigrants": 93
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 3.016650000000027,
+     "nodeExpansions": 24819
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 2.908005000000003,
+     "nodeExpansions": 22491
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 3.19440800000001,
+     "nodeExpansions": 23362
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 2.95539500000001,
+     "nodeExpansions": 24076
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 2.8564780000000383,
+     "nodeExpansions": 23151
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 3.329814000000056,
+     "nodeExpansions": 25215
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 5.260157999999933,
+     "nodeExpansions": 42062
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 3.0044679999999744,
+     "nodeExpansions": 24137
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 50,
+     "pathCells": 51,
+     "timeMs": 3.3157670000000508,
+     "nodeExpansions": 25112
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 48,
+     "pathCells": 49,
+     "timeMs": 3.6693369999999277,
+     "nodeExpansions": 29427
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 3.351048000000003,
+     "std": 0.715045313319345,
+     "best": 2.8564780000000383,
+     "worst": 5.260157999999933
+    },
+    "cost": {
+     "mean": 49.6,
+     "std": 0.8432740427115678,
+     "best": 48,
+     "worst": 50
+    },
+    "expansions": {
+     "mean": 26385.2,
+     "std": 5827.22903083256,
+     "best": 22491,
+     "worst": 42062
+    }
+   }
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N51",
+   "description": "Labirinto gerado 51×51 (braid 0,08)",
+   "x": 51,
+   "size": 51,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 150,
+   "pathCells": 151,
+   "timeMs": 11.423644199999966,
+   "timedRuns": 1,
+   "expansions": 91202,
+   "operations": {
+    "generationsRun": 25,
+    "fitnessEvaluations": 686,
+    "crossovers": 551,
+    "mutations": 211,
+    "immigrants": 75
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 10.126500999999962,
+     "nodeExpansions": 90931
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 10.110180000000014,
+     "nodeExpansions": 95640
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 11.192818999999986,
+     "nodeExpansions": 101658
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 11.159064999999941,
+     "nodeExpansions": 100517
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 10.517440999999963,
+     "nodeExpansions": 94599
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 12.65208199999995,
+     "nodeExpansions": 114671
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 15.085708999999952,
+     "nodeExpansions": 135052
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 13.279870999999957,
+     "nodeExpansions": 115954
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 10.101402000000007,
+     "nodeExpansions": 91864
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 150,
+     "pathCells": 151,
+     "timeMs": 10.011371999999938,
+     "nodeExpansions": 91202
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 11.423644199999966,
+     "std": 1.7146573520666288,
+     "best": 10.011371999999938,
+     "worst": 15.085708999999952
+    },
+    "cost": {
+     "mean": 150,
+     "std": 0,
+     "best": 150,
+     "worst": 150
+    },
+    "expansions": {
+     "mean": 103208.8,
+     "std": 14424.091735703845,
+     "best": 90931,
+     "worst": 135052
+    }
+   }
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N101",
+   "description": "Labirinto gerado 101×101 (braid 0,08)",
+   "x": 101,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 280,
+   "pathCells": 281,
+   "timeMs": 59.1618121,
+   "timedRuns": 1,
+   "expansions": 608233,
+   "operations": {
+    "generationsRun": 62,
+    "fitnessEvaluations": 1636,
+    "crossovers": 1356,
+    "mutations": 539,
+    "immigrants": 186
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 75.2227049999999,
+     "nodeExpansions": 747251
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 49.4328730000002,
+     "nodeExpansions": 493017
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 280,
+     "pathCells": 281,
+     "timeMs": 60.326474999999846,
+     "nodeExpansions": 608233
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 290,
+     "pathCells": 291,
+     "timeMs": 56.19541400000003,
+     "nodeExpansions": 553533
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 280,
+     "pathCells": 281,
+     "timeMs": 71.06953299999986,
+     "nodeExpansions": 691397
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 54.08024,
+     "nodeExpansions": 539526
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 286,
+     "pathCells": 287,
+     "timeMs": 40.78331800000001,
+     "nodeExpansions": 401327
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 292,
+     "pathCells": 293,
+     "timeMs": 48.705875000000106,
+     "nodeExpansions": 471952
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 282,
+     "pathCells": 283,
+     "timeMs": 73.51750700000002,
+     "nodeExpansions": 735405
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 62.28418099999999,
+     "nodeExpansions": 611950
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 59.1618121,
+     "std": 11.514761134143072,
+     "best": 40.78331800000001,
+     "worst": 75.2227049999999
+    },
+    "cost": {
+     "mean": 286.2,
+     "std": 4.157990967870046,
+     "best": 280,
+     "worst": 292
+    },
+    "expansions": {
+     "mean": 585359.1,
+     "std": 115261.39769280954,
+     "best": 401327,
+     "worst": 747251
+    }
+   }
+  },
+  {
+   "experiment": "M1",
+   "scenario": "M1-N201",
+   "description": "Labirinto gerado 201×201 (braid 0,08)",
+   "x": 201,
+   "size": 201,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 590,
+   "pathCells": 591,
+   "timeMs": 234.4893212,
+   "timedRuns": 1,
+   "expansions": 1626874,
+   "operations": {
+    "generationsRun": 47,
+    "fitnessEvaluations": 1259,
+    "crossovers": 1051,
+    "mutations": 360,
+    "immigrants": 141
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 590,
+     "pathCells": 591,
+     "timeMs": 148.1388139999999,
+     "nodeExpansions": 1626874
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 620,
+     "pathCells": 621,
+     "timeMs": 244.32143900000028,
+     "nodeExpansions": 2672869
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 654,
+     "pathCells": 655,
+     "timeMs": 228.79564699999992,
+     "nodeExpansions": 2465806
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 696,
+     "pathCells": 697,
+     "timeMs": 253.5186709999998,
+     "nodeExpansions": 2770001
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 670,
+     "pathCells": 671,
+     "timeMs": 248.33311000000003,
+     "nodeExpansions": 2716882
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 598,
+     "pathCells": 599,
+     "timeMs": 241.5187430000001,
+     "nodeExpansions": 2641291
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 596,
+     "pathCells": 597,
+     "timeMs": 248.045349,
+     "nodeExpansions": 2602977
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 592,
+     "pathCells": 593,
+     "timeMs": 253.455238,
+     "nodeExpansions": 2749330
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 672,
+     "pathCells": 673,
+     "timeMs": 236.00486599999977,
+     "nodeExpansions": 2511898
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 622,
+     "pathCells": 623,
+     "timeMs": 242.76133500000014,
+     "nodeExpansions": 2662781
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 234.4893212,
+     "std": 31.27454227597418,
+     "best": 148.1388139999999,
+     "worst": 253.5186709999998
+    },
+    "cost": {
+     "mean": 631,
+     "std": 38.97862662194928,
+     "best": 590,
+     "worst": 696
+    },
+    "expansions": {
+     "mean": 2542070.9,
+     "std": 335826.13603617705,
+     "best": 1626874,
+     "worst": 2770001
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-open",
+   "description": "Grid aberto (sem obstáculos)",
+   "x": 0,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 37.510962199999994,
+   "timedRuns": 1,
+   "expansions": 250303,
+   "operations": {
+    "generationsRun": 30,
+    "fitnessEvaluations": 828,
+    "crossovers": 648,
+    "mutations": 248,
+    "immigrants": 90
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 36.60049900000013,
+     "nodeExpansions": 336422
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 42.26555399999961,
+     "nodeExpansions": 364509
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 27.57462200000009,
+     "nodeExpansions": 250303
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 37.306690000000344,
+     "nodeExpansions": 353067
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 29.92147499999919,
+     "nodeExpansions": 268818
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 46.08176800000001,
+     "nodeExpansions": 431788
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 36.93218700000034,
+     "nodeExpansions": 337432
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 35.52133700000013,
+     "nodeExpansions": 342347
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 32.51741899999979,
+     "nodeExpansions": 312045
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 50.38807100000031,
+     "nodeExpansions": 475806
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 37.510962199999994,
+     "std": 7.057822232980757,
+     "best": 27.57462200000009,
+     "worst": 50.38807100000031
+    },
+    "cost": {
+     "mean": 200,
+     "std": 0,
+     "best": 200,
+     "worst": 200
+    },
+    "expansions": {
+     "mean": 347253.7,
+     "std": 67521.51804186408,
+     "best": 250303,
+     "worst": 475806
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand25",
+   "description": "Obstáculos aleatórios 25%",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 202,
+   "pathCells": 203,
+   "timeMs": 61.30885829999988,
+   "timedRuns": 1,
+   "expansions": 562098,
+   "operations": {
+    "generationsRun": 58,
+    "fitnessEvaluations": 1568,
+    "crossovers": 1305,
+    "mutations": 486,
+    "immigrants": 172
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 202,
+     "pathCells": 203,
+     "timeMs": 84.46184100000028,
+     "nodeExpansions": 741907
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 208,
+     "pathCells": 209,
+     "timeMs": 49.6789689999996,
+     "nodeExpansions": 443002
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 204,
+     "pathCells": 205,
+     "timeMs": 68.59763300000031,
+     "nodeExpansions": 564976
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 210,
+     "pathCells": 211,
+     "timeMs": 60.58151899999939,
+     "nodeExpansions": 496350
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 202,
+     "pathCells": 203,
+     "timeMs": 65.01103299999977,
+     "nodeExpansions": 562098
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 202,
+     "pathCells": 203,
+     "timeMs": 69.70381199999974,
+     "nodeExpansions": 596155
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 204,
+     "pathCells": 205,
+     "timeMs": 51.31351699999959,
+     "nodeExpansions": 447446
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 204,
+     "pathCells": 205,
+     "timeMs": 67.48675999999978,
+     "nodeExpansions": 597652
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 206,
+     "pathCells": 207,
+     "timeMs": 48.989724000000024,
+     "nodeExpansions": 426867
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 204,
+     "pathCells": 205,
+     "timeMs": 47.26377500000035,
+     "nodeExpansions": 416800
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 61.30885829999988,
+     "std": 12.00115869026192,
+     "best": 47.26377500000035,
+     "worst": 84.46184100000028
+    },
+    "cost": {
+     "mean": 204.6,
+     "std": 2.6749870196985173,
+     "best": 202,
+     "worst": 210
+    },
+    "expansions": {
+     "mean": 529325.3,
+     "std": 102780.0763583747,
+     "best": 416800,
+     "worst": 741907
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-rand40",
+   "description": "Obstáculos aleatórios 40%",
+   "x": 2,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 288,
+   "pathCells": 289,
+   "timeMs": 44.9890596000002,
+   "timedRuns": 1,
+   "expansions": 328782,
+   "operations": {
+    "generationsRun": 44,
+    "fitnessEvaluations": 1171,
+    "crossovers": 970,
+    "mutations": 348,
+    "immigrants": 132
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 45.53704700000071,
+     "nodeExpansions": 373095
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 45.52282000000014,
+     "nodeExpansions": 362639
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 294,
+     "pathCells": 295,
+     "timeMs": 37.743163000000095,
+     "nodeExpansions": 307330
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 40.874039999999695,
+     "nodeExpansions": 335942
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 59.92153800000051,
+     "nodeExpansions": 479843
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 290,
+     "pathCells": 291,
+     "timeMs": 42.965479000000414,
+     "nodeExpansions": 346486
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 40.12816600000042,
+     "nodeExpansions": 328782
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 290,
+     "pathCells": 291,
+     "timeMs": 37.34110099999998,
+     "nodeExpansions": 299887
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 288,
+     "pathCells": 289,
+     "timeMs": 62.63773599999968,
+     "nodeExpansions": 495881
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 290,
+     "pathCells": 291,
+     "timeMs": 37.219506000000365,
+     "nodeExpansions": 296384
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 44.9890596000002,
+     "std": 9.135137795990607,
+     "best": 37.219506000000365,
+     "worst": 62.63773599999968
+    },
+    "cost": {
+     "mean": 289.2,
+     "std": 1.9321835661585915,
+     "best": 288,
+     "worst": 294
+    },
+    "expansions": {
+     "mean": 362626.9,
+     "std": 70793.99247024975,
+     "best": 296384,
+     "worst": 495881
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-perfect",
+   "description": "Labirinto perfeito (braid 0)",
+   "x": 3,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 2628,
+   "pathCells": 2629,
+   "timeMs": 96.73600450000012,
+   "timedRuns": 1,
+   "expansions": 602456,
+   "operations": {
+    "generationsRun": 25,
+    "fitnessEvaluations": 682,
+    "crossovers": 550,
+    "mutations": 207,
+    "immigrants": 75
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 96.5937729999996,
+     "nodeExpansions": 646398
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 97.63873000000058,
+     "nodeExpansions": 634227
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 98.15994799999953,
+     "nodeExpansions": 659527
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 93.44933600000059,
+     "nodeExpansions": 621319
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 97.9791210000003,
+     "nodeExpansions": 639405
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 98.29513400000087,
+     "nodeExpansions": 658968
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 92.6757660000003,
+     "nodeExpansions": 602456
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 97.16176899999937,
+     "nodeExpansions": 628098
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 97.62349300000005,
+     "nodeExpansions": 635950
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 2628,
+     "pathCells": 2629,
+     "timeMs": 97.78297500000008,
+     "nodeExpansions": 639207
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 96.73600450000012,
+     "std": 2.0053197758354675,
+     "best": 92.6757660000003,
+     "worst": 98.29513400000087
+    },
+    "cost": {
+     "mean": 2628,
+     "std": 0,
+     "best": 2628,
+     "worst": 2628
+    },
+    "expansions": {
+     "mean": 636555.5,
+     "std": 17043.341999150285,
+     "best": 602456,
+     "worst": 659527
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid08",
+   "description": "Labirinto braid 0,08",
+   "x": 4,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 316,
+   "pathCells": 317,
+   "timeMs": 80.52251369999995,
+   "timedRuns": 1,
+   "expansions": 729323,
+   "operations": {
+    "generationsRun": 66,
+    "fitnessEvaluations": 1774,
+    "crossovers": 1476,
+    "mutations": 563,
+    "immigrants": 196
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 356,
+     "pathCells": 357,
+     "timeMs": 86.6718949999995,
+     "nodeExpansions": 837594
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 332,
+     "pathCells": 333,
+     "timeMs": 87.72305599999981,
+     "nodeExpansions": 868060
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 346,
+     "pathCells": 347,
+     "timeMs": 91.51166199999989,
+     "nodeExpansions": 872374
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 380,
+     "pathCells": 381,
+     "timeMs": 101.3484440000002,
+     "nodeExpansions": 886755
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 348,
+     "pathCells": 349,
+     "timeMs": 63.64643999999953,
+     "nodeExpansions": 614920
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 328,
+     "pathCells": 329,
+     "timeMs": 72.96639400000004,
+     "nodeExpansions": 691831
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 316,
+     "pathCells": 317,
+     "timeMs": 75.18720800000028,
+     "nodeExpansions": 729323
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 350,
+     "pathCells": 351,
+     "timeMs": 87.03715300000022,
+     "nodeExpansions": 849135
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 332,
+     "pathCells": 333,
+     "timeMs": 52.9134210000002,
+     "nodeExpansions": 517719
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 328,
+     "pathCells": 329,
+     "timeMs": 86.21946399999979,
+     "nodeExpansions": 819256
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 80.52251369999995,
+     "std": 14.343653323623693,
+     "best": 52.9134210000002,
+     "worst": 101.3484440000002
+    },
+    "cost": {
+     "mean": 341.6,
+     "std": 18.325452851763913,
+     "best": 316,
+     "worst": 380
+    },
+    "expansions": {
+     "mean": 768696.7,
+     "std": 125799.18496472418,
+     "best": 517719,
+     "worst": 886755
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-braid30",
+   "description": "Labirinto braid 0,30",
+   "x": 5,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 200,
+   "pathCells": 201,
+   "timeMs": 63.6757705,
+   "timedRuns": 1,
+   "expansions": 570038,
+   "operations": {
+    "generationsRun": 80,
+    "fitnessEvaluations": 2141,
+    "crossovers": 1780,
+    "mutations": 653,
+    "immigrants": 238
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 202,
+     "pathCells": 203,
+     "timeMs": 67.70061899999928,
+     "nodeExpansions": 461278
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 206,
+     "pathCells": 207,
+     "timeMs": 74.20103100000051,
+     "nodeExpansions": 657218
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 210,
+     "pathCells": 211,
+     "timeMs": 74.39983200000097,
+     "nodeExpansions": 628726
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 208,
+     "pathCells": 209,
+     "timeMs": 68.61792299999979,
+     "nodeExpansions": 578053
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 200,
+     "pathCells": 201,
+     "timeMs": 66.22927399999935,
+     "nodeExpansions": 570038
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 210,
+     "pathCells": 211,
+     "timeMs": 50.74072200000046,
+     "nodeExpansions": 435863
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 206,
+     "pathCells": 207,
+     "timeMs": 55.18248700000004,
+     "nodeExpansions": 473803
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 208,
+     "pathCells": 209,
+     "timeMs": 62.824453999999605,
+     "nodeExpansions": 543102
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 206,
+     "pathCells": 207,
+     "timeMs": 55.2021050000003,
+     "nodeExpansions": 493901
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 206,
+     "pathCells": 207,
+     "timeMs": 61.65925799999968,
+     "nodeExpansions": 540555
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 63.6757705,
+     "std": 8.089613878402707,
+     "best": 50.74072200000046,
+     "worst": 74.39983200000097
+    },
+    "cost": {
+     "mean": 206.2,
+     "std": 3.1902629637347726,
+     "best": 200,
+     "worst": 210
+    },
+    "expansions": {
+     "mean": 538253.7,
+     "std": 72641.38574615864,
+     "best": 435863,
+     "worst": 657218
+    }
+   }
+  },
+  {
+   "experiment": "M2",
+   "scenario": "M2-utrap",
+   "description": "Armadilha em U (grid aberto)",
+   "x": 6,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 142,
+   "pathCells": 143,
+   "timeMs": 50.369559599999775,
+   "timedRuns": 1,
+   "expansions": 369275,
+   "operations": {
+    "generationsRun": 36,
+    "fitnessEvaluations": 973,
+    "crossovers": 817,
+    "mutations": 304,
+    "immigrants": 108
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 55.68820500000038,
+     "nodeExpansions": 559750
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 35.61870999999883,
+     "nodeExpansions": 369275
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 56.278581999999005,
+     "nodeExpansions": 552214
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 146,
+     "pathCells": 147,
+     "timeMs": 51.880003999998735,
+     "nodeExpansions": 512935
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 62.77824700000019,
+     "nodeExpansions": 612643
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 144,
+     "pathCells": 145,
+     "timeMs": 53.8289539999987,
+     "nodeExpansions": 532944
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 144,
+     "pathCells": 145,
+     "timeMs": 40.77784799999972,
+     "nodeExpansions": 403714
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 144,
+     "pathCells": 145,
+     "timeMs": 49.03910700000051,
+     "nodeExpansions": 491360
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 144,
+     "pathCells": 145,
+     "timeMs": 57.093205000001035,
+     "nodeExpansions": 567562
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 142,
+     "pathCells": 143,
+     "timeMs": 40.71273400000064,
+     "nodeExpansions": 410326
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 50.369559599999775,
+     "std": 8.70025029716468,
+     "best": 35.61870999999883,
+     "worst": 62.77824700000019
+    },
+    "cost": {
+     "mean": 143.2,
+     "std": 1.3984117975602022,
+     "best": 142,
+     "worst": 146
+    },
+    "expansions": {
+     "mean": 501272.3,
+     "std": 81145.9335423258,
+     "best": 369275,
+     "worst": 612643
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze41",
+   "description": "Labirinto 41×41 (braid 0,08)",
+   "x": 0,
+   "size": 41,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 102,
+   "pathCells": 103,
+   "timeMs": 8.99225630000019,
+   "timedRuns": 1,
+   "expansions": 63879,
+   "operations": {
+    "generationsRun": 26,
+    "fitnessEvaluations": 686,
+    "crossovers": 558,
+    "mutations": 184,
+    "immigrants": 78
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 104,
+     "pathCells": 105,
+     "timeMs": 8.312616999999591,
+     "nodeExpansions": 69663
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 104,
+     "pathCells": 105,
+     "timeMs": 11.31068199999936,
+     "nodeExpansions": 94802
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 7.782673000001523,
+     "nodeExpansions": 64601
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 8.020093000000998,
+     "nodeExpansions": 66699
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 8.062422999999399,
+     "nodeExpansions": 68029
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 8.863498999999138,
+     "nodeExpansions": 73061
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 7.531979000001229,
+     "nodeExpansions": 63879
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 12.309223000000202,
+     "nodeExpansions": 100630
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 9.592028999999457,
+     "nodeExpansions": 84192
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 8.137345000001005,
+     "nodeExpansions": 69704
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 8.99225630000019,
+     "std": 1.6107847452043984,
+     "best": 7.531979000001229,
+     "worst": 12.309223000000202
+    },
+    "cost": {
+     "mean": 102.4,
+     "std": 0.8432740427115678,
+     "best": 102,
+     "worst": 104
+    },
+    "expansions": {
+     "mean": 75526,
+     "std": 13082.432656896126,
+     "best": 63879,
+     "worst": 100630
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 258,
+   "pathCells": 259,
+   "timeMs": 72.27220699999998,
+   "timedRuns": 1,
+   "expansions": 579244,
+   "operations": {
+    "generationsRun": 51,
+    "fitnessEvaluations": 1369,
+    "crossovers": 1145,
+    "mutations": 437,
+    "immigrants": 153
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 272,
+     "pathCells": 273,
+     "timeMs": 85.00634799999898,
+     "nodeExpansions": 855066
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 266,
+     "pathCells": 267,
+     "timeMs": 70.3932390000009,
+     "nodeExpansions": 715832
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 268,
+     "pathCells": 269,
+     "timeMs": 85.62401599999976,
+     "nodeExpansions": 855997
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 266,
+     "pathCells": 267,
+     "timeMs": 58.93194399999993,
+     "nodeExpansions": 589561
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 264,
+     "pathCells": 265,
+     "timeMs": 88.27684899999986,
+     "nodeExpansions": 881567
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 268,
+     "pathCells": 269,
+     "timeMs": 79.79242599999998,
+     "nodeExpansions": 807525
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 264,
+     "pathCells": 265,
+     "timeMs": 71.80808199999956,
+     "nodeExpansions": 725665
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 270,
+     "pathCells": 271,
+     "timeMs": 66.69705500000055,
+     "nodeExpansions": 672969
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 276,
+     "pathCells": 277,
+     "timeMs": 60.75816699999996,
+     "nodeExpansions": 619727
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 258,
+     "pathCells": 259,
+     "timeMs": 55.43394400000034,
+     "nodeExpansions": 579244
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 72.27220699999998,
+     "std": 11.93511391468293,
+     "best": 55.43394400000034,
+     "worst": 88.27684899999986
+    },
+    "cost": {
+     "mean": 267.2,
+     "std": 4.917090377222873,
+     "best": 258,
+     "worst": 276
+    },
+    "expansions": {
+     "mean": 730315.3,
+     "std": 114785.36179133064,
+     "best": 579244,
+     "worst": 881567
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "gerações = 300, sem estagnação",
+   "status": "found",
+   "pathCost": 258,
+   "pathCells": 259,
+   "timeMs": 304.36512679999976,
+   "timedRuns": 1,
+   "expansions": 2960803,
+   "operations": {
+    "generationsRun": 300,
+    "fitnessEvaluations": 7928,
+    "crossovers": 6749,
+    "mutations": 2489,
+    "immigrants": 900
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 300,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 0,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 264,
+     "pathCells": 265,
+     "timeMs": 294.2587619999995,
+     "nodeExpansions": 2979054
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 258,
+     "pathCells": 259,
+     "timeMs": 292.60702200000014,
+     "nodeExpansions": 2960803
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 264,
+     "pathCells": 265,
+     "timeMs": 316.0831419999995,
+     "nodeExpansions": 3037050
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 266,
+     "pathCells": 267,
+     "timeMs": 293.9530679999989,
+     "nodeExpansions": 2898821
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 264,
+     "pathCells": 265,
+     "timeMs": 297.17707100000007,
+     "nodeExpansions": 2950550
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 264,
+     "pathCells": 265,
+     "timeMs": 300.17263699999967,
+     "nodeExpansions": 2991532
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 264,
+     "pathCells": 265,
+     "timeMs": 300.6932940000006,
+     "nodeExpansions": 2906195
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 262,
+     "pathCells": 263,
+     "timeMs": 299.628412,
+     "nodeExpansions": 2950217
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 262,
+     "pathCells": 263,
+     "timeMs": 325.56981000000087,
+     "nodeExpansions": 2907771
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 258,
+     "pathCells": 259,
+     "timeMs": 323.50804999999855,
+     "nodeExpansions": 3078787
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 304.36512679999976,
+     "std": 12.504970234131886,
+     "best": 292.60702200000014,
+     "worst": 325.56981000000087
+    },
+    "cost": {
+     "mean": 262.6,
+     "std": 2.6749870196985173,
+     "best": 258,
+     "worst": 266
+    },
+    "expansions": {
+     "mean": 2966078,
+     "std": 58296.489196748946,
+     "best": 2898821,
+     "worst": 3078787
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-maze101",
+   "description": "Labirinto 101×101 (braid 0,08)",
+   "x": 1,
+   "size": 101,
+   "algorithmId": "ga",
+   "variant": "população = 90",
+   "status": "found",
+   "pathCost": 258,
+   "pathCells": 259,
+   "timeMs": 189.5106099999999,
+   "timedRuns": 1,
+   "expansions": 1443572,
+   "operations": {
+    "generationsRun": 41,
+    "fitnessEvaluations": 3473,
+    "crossovers": 2904,
+    "mutations": 1038,
+    "immigrants": 369
+   },
+   "params": {
+    "populationSize": 90,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 262,
+     "pathCells": 263,
+     "timeMs": 170.50966300000073,
+     "nodeExpansions": 1665259
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 278,
+     "pathCells": 279,
+     "timeMs": 217.14857800000027,
+     "nodeExpansions": 2060961
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 264,
+     "pathCells": 265,
+     "timeMs": 201.48299600000064,
+     "nodeExpansions": 1883958
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 266,
+     "pathCells": 267,
+     "timeMs": 171.35499999999956,
+     "nodeExpansions": 1670892
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 258,
+     "pathCells": 259,
+     "timeMs": 192.65994900000078,
+     "nodeExpansions": 1947046
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 262,
+     "pathCells": 263,
+     "timeMs": 201.32582000000002,
+     "nodeExpansions": 2028161
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 268,
+     "pathCells": 269,
+     "timeMs": 172.00495099999898,
+     "nodeExpansions": 1698944
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 268,
+     "pathCells": 269,
+     "timeMs": 158.8253339999992,
+     "nodeExpansions": 1573570
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 264,
+     "pathCells": 265,
+     "timeMs": 267.85652499999924,
+     "nodeExpansions": 2610549
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 258,
+     "pathCells": 259,
+     "timeMs": 141.93728399999964,
+     "nodeExpansions": 1443572
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 189.5106099999999,
+     "std": 35.58512952634683,
+     "best": 141.93728399999964,
+     "worst": 267.85652499999924
+    },
+    "cost": {
+     "mean": 264.8,
+     "std": 5.827139568909908,
+     "best": 258,
+     "worst": 278
+    },
+    "expansions": {
+     "mean": 1858291.2,
+     "std": 332530.43147517595,
+     "best": 1443572,
+     "worst": 2610549
+    }
+   }
+  },
+  {
+   "experiment": "M4",
+   "scenario": "M4-rand25-51",
+   "description": "Grid 51×51 com 25% de obstáculos",
+   "x": 2,
+   "size": 51,
+   "algorithmId": "ga",
+   "variant": "padrão",
+   "status": "found",
+   "pathCost": 100,
+   "pathCells": 101,
+   "timeMs": 13.012740999999732,
+   "timedRuns": 1,
+   "expansions": 79219,
+   "operations": {
+    "generationsRun": 30,
+    "fitnessEvaluations": 835,
+    "crossovers": 683,
+    "mutations": 280,
+    "immigrants": 84
+   },
+   "params": {
+    "populationSize": 30,
+    "generations": 80,
+    "crossoverRate": 0.8,
+    "mutationRate": 0.3,
+    "stagnationLimit": 25,
+    "runs": 10
+   },
+   "runs": [
+    {
+     "seed": 1,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 14.898424999999406,
+     "nodeExpansions": 110685
+    },
+    {
+     "seed": 2,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 16.248421000000235,
+     "nodeExpansions": 127011
+    },
+    {
+     "seed": 3,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 12.632394000000204,
+     "nodeExpansions": 98195
+    },
+    {
+     "seed": 4,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 13.17661500000031,
+     "nodeExpansions": 103458
+    },
+    {
+     "seed": 5,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 11.069757000001118,
+     "nodeExpansions": 84847
+    },
+    {
+     "seed": 6,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 11.328888000000006,
+     "nodeExpansions": 90812
+    },
+    {
+     "seed": 7,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 9.99312799999825,
+     "nodeExpansions": 79219
+    },
+    {
+     "seed": 8,
+     "found": true,
+     "pathCost": 102,
+     "pathCells": 103,
+     "timeMs": 12.194525999999314,
+     "nodeExpansions": 94328
+    },
+    {
+     "seed": 9,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 11.30136499999935,
+     "nodeExpansions": 93064
+    },
+    {
+     "seed": 10,
+     "found": true,
+     "pathCost": 100,
+     "pathCells": 101,
+     "timeMs": 17.28389099999913,
+     "nodeExpansions": 137111
+    }
+   ],
+   "aggregate": {
+    "runs": 10,
+    "successes": 10,
+    "successRate": 1,
+    "time": {
+     "mean": 13.012740999999732,
+     "std": 2.3982994920076495,
+     "best": 9.99312799999825,
+     "worst": 17.28389099999913
+    },
+    "cost": {
+     "mean": 100.2,
+     "std": 0.6324555320336758,
+     "best": 100,
+     "worst": 102
+    },
+    "expansions": {
+     "mean": 101873,
+     "std": 18340.260994144366,
+     "best": 79219,
+     "worst": 137111
+    }
+   }
+  }
+ ]
+}

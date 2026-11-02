@@ -1,6 +1,7 @@
-import { MarkerType } from "reactflow";
 import type { Node, Edge } from "reactflow";
-import { layoutNodesCircle } from "./layout";
+import { edgeIsBidirectional, edgeWeight, makeEditorEdge, nodeLabel } from "./editorModel";
+import { applyPositions } from "./editorBuild";
+import { forceLayout } from "./layout";
 
 export const GRAPH_FILE_EXTENSION = ".graph.json";
 
@@ -24,23 +25,18 @@ export type GraphFileV1 = {
 };
 
 export function serializeGraphToJson(nodes: Node[], edges: Edge[]): string {
+  const ids = new Set(nodes.map((n) => n.id));
   const payload: GraphFileV1 = {
     version: 1,
     nodes: nodes.map((n) => ({
       id: n.id,
-      label:
-        typeof (n.data as { label?: string } | undefined)?.label === "string"
-          ? (n.data as { label: string }).label
-          : n.id,
+      label: nodeLabel(n),
       position: { x: n.position.x, y: n.position.y },
     })),
-    edges: edges.map((e) => {
-      const raw = e.data as { weight?: number; bidirectional?: boolean } | undefined;
-      const weight =
-        typeof raw?.weight === "number" && Number.isFinite(raw.weight)
-          ? raw.weight
-          : 1;
-      const bidirectional = raw?.bidirectional === true;
+    // Arestas que apontam para nós removidos não são exportadas (o import as rejeitaria).
+    edges: edges.filter((e) => ids.has(e.source) && ids.has(e.target)).map((e) => {
+      const weight = edgeWeight(e);
+      const bidirectional = edgeIsBidirectional(e);
       return {
         id: e.id,
         source: e.source,
@@ -132,11 +128,7 @@ export function parseGraphFromJson(text: string): ParseGraphFileResult {
     return { ok: false, error: "O grafo precisa ter pelo menos um nó." };
   }
 
-  if (!allNodesHavePosition) {
-    const laidOut = layoutNodesCircle(nodes);
-    nodes.length = 0;
-    nodes.push(...laidOut);
-  }
+  const needsLayout = !allNodesHavePosition;
 
   const edges: Edge[] = [];
   const edgeIds = new Set<string>();
@@ -175,15 +167,16 @@ export function parseGraphFromJson(text: string): ParseGraphFileResult {
       };
     }
     edgeIds.add(id);
-    const bidirectional = e.bidirectional === true;
-    edges.push({
-      id,
-      source,
-      target,
-      type: "weighted",
-      data: bidirectional ? { weight: w, bidirectional: true } : { weight: w },
-      markerEnd: { type: MarkerType.ArrowClosed },
-    });
+    edges.push(makeEditorEdge(id, source, target, w, e.bidirectional === true));
+  }
+
+  if (needsLayout) {
+    // Sem posições no arquivo: layout por forças (menos cruzamentos que o círculo antigo).
+    const index = new Map(nodes.map((n, i) => [n.id, i]));
+    const pos = forceLayout(nodes.length, edges.map((e) => [index.get(e.source)!, index.get(e.target)!]));
+    const laidOut = applyPositions(nodes, pos);
+    nodes.length = 0;
+    nodes.push(...laidOut);
   }
 
   return { ok: true, nodes, edges };

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" font-family="system-ui, sans-serif" font-size="12">
+<rect width="760" height="430" fill="#ffffff"/>
+<text x="78" y="22" font-size="15" font-weight="700" fill="#111">M3 — Expansões vs. distância até o destino</text>
+<line x1="78" x2="560" y1="374" y2="374" stroke="#e5e7eb"/>
+<text x="72" y="378" text-anchor="end" fill="#444">0</text>
+<line x1="78" x2="560" y1="307.2" y2="307.2" stroke="#e5e7eb"/>
+<text x="72" y="311.2" text-anchor="end" fill="#444">6.510</text>
+<line x1="78" x2="560" y1="240.4" y2="240.4" stroke="#e5e7eb"/>
+<text x="72" y="244.4" text-anchor="end" fill="#444">13.021</text>
+<line x1="78" x2="560" y1="173.6" y2="173.6" stroke="#e5e7eb"/>
+<text x="72" y="177.6" text-anchor="end" fill="#444">19.531</text>
+<line x1="78" x2="560" y1="106.80000000000001" y2="106.80000000000001" stroke="#e5e7eb"/>
+<text x="72" y="110.80000000000001" text-anchor="end" fill="#444">26.042</text>
+<line x1="78" x2="560" y1="39.99999999999994" y2="39.99999999999994" stroke="#e5e7eb"/>
+<text x="72" y="43.99999999999994" text-anchor="end" fill="#444">32.552</text>
+<line x1="78" x2="78" y1="40" y2="374" stroke="#f1f2f4"/>
+<text x="78" y="390" text-anchor="middle" fill="#444">25</text>
+<line x1="146.85714285714283" x2="146.85714285714283" y1="40" y2="374" stroke="#f1f2f4"/>
+<text x="146.85714285714283" y="390" text-anchor="middle" fill="#444">50</text>
+<line x1="284.57142857142856" x2="284.57142857142856" y1="40" y2="374" stroke="#f1f2f4"/>
+<text x="284.57142857142856" y="390" text-anchor="middle" fill="#444">100</text>
+<line x1="560" x2="560" y1="40" y2="374" stroke="#f1f2f4"/>
+<text x="560" y="390" text-anchor="middle" fill="#444">200</text>
+<line x1="78" x2="560" y1="374" y2="374" stroke="#555"/><line x1="78" x2="78" y1="40" y2="374" stroke="#555"/>
+<text x="319" y="416" text-anchor="middle" fill="#222">distância ótima (passos)</text>
+<text transform="translate(16 207) rotate(-90)" text-anchor="middle" fill="#222">vértices expandidos</text>
+<polyline fill="none" stroke="#5b8cff" stroke-width="2.2"  points="78,367.0947386788268 146.85714285714283,342.9314542637259 284.57142857142856,239.6295657324157 560,64.74074074074076"/>
+<circle cx="78" cy="367.0947386788268" r="3.2" fill="#5b8cff"/>
+<circle cx="146.85714285714283" cy="342.9314542637259" r="3.2" fill="#5b8cff"/>
+<circle cx="284.57142857142856" cy="239.6295657324157" r="3.2" fill="#5b8cff"/>
+<circle cx="560" cy="64.74074074074076" r="3.2" fill="#5b8cff"/>
+<line x1="574" x2="596" y1="48" y2="48" stroke="#5b8cff" stroke-width="3" />
+<text x="602" y="52" fill="#222">Dijkstra</text>
+<polyline fill="none" stroke="#2dd4bf" stroke-width="2.2"  points="78,367.6385408333917 146.85714285714283,342.82885008361933 284.57142857142856,240.94289923777998 560,64.79204283079406"/>
+<circle cx="78" cy="367.6385408333917" r="3.2" fill="#2dd4bf"/>
+<circle cx="146.85714285714283" cy="342.82885008361933" r="3.2" fill="#2dd4bf"/>
+<circle cx="284.57142857142856" cy="240.94289923777998" r="3.2" fill="#2dd4bf"/>
+<circle cx="560" cy="64.79204283079406" r="3.2" fill="#2dd4bf"/>
+<line x1="574" x2="596" y1="68" y2="68" stroke="#2dd4bf" stroke-width="3" />
+<text x="602" y="72" fill="#222">BFS</text>
+<polyline fill="none" stroke="#a3e635" stroke-width="2.2"  points="78,371.1065621209943 146.85714285714283,360.0971335955577 284.57142857142856,321.6513473096201 560,268.58446535849407"/>
+<circle cx="78" cy="371.1065621209943" r="3.2" fill="#a3e635"/>
+<circle cx="146.85714285714283" cy="360.0971335955577" r="3.2" fill="#a3e635"/>
+<circle cx="284.57142857142856" cy="321.6513473096201" r="3.2" fill="#a3e635"/>
+<circle cx="560" cy="268.58446535849407" r="3.2" fill="#a3e635"/>
+<line x1="574" x2="596" y1="88" y2="88" stroke="#a3e635" stroke-width="3" />
+<text x="602" y="92" fill="#222">BFS bi</text>
+<polyline fill="none" stroke="#c084fc" stroke-width="2.2"  points="78,373.6306249516163 146.85714285714283,372.8405727647956 284.57142857142856,369.28020771509705 560,359.67645645712065"/>
+<circle cx="78" cy="373.6306249516163" r="3.2" fill="#c084fc"/>
+<circle cx="146.85714285714283" cy="372.8405727647956" r="3.2" fill="#c084fc"/>
+<circle cx="284.57142857142856" cy="369.28020771509705" r="3.2" fill="#c084fc"/>
+<circle cx="560" cy="359.67645645712065" r="3.2" fill="#c084fc"/>
+<line x1="574" x2="596" y1="108" y2="108" stroke="#c084fc" stroke-width="3" />
+<text x="602" y="112" fill="#222">A*</text>
+<polyline fill="none" stroke="#f472b6" stroke-width="2.2"  points="78,373.7127082957016 146.85714285714283,373.2715103212432 284.57142857142856,372.82005192877426 560,370.0189578118645"/>
+<circle cx="78" cy="373.7127082957016" r="3.2" fill="#f472b6"/>
+<circle cx="146.85714285714283" cy="373.2715103212432" r="3.2" fill="#f472b6"/>
+<circle cx="284.57142857142856" cy="372.82005192877426" r="3.2" fill="#f472b6"/>
+<circle cx="560" cy="370.0189578118645" r="3.2" fill="#f472b6"/>
+<line x1="574" x2="596" y1="128" y2="128" stroke="#f472b6" stroke-width="3" />
+<text x="602" y="132" fill="#222">Greedy</text>
+</svg>
